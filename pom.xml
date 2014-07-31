@@ -22,11 +22,7 @@
     <url>http://www.acm-sl.org</url>
   </organization>
 
-  <prerequisites>
-    <maven>2.2.1</maven>
-  </prerequisites>
-
-  <properties>
+ <properties>
 
     <version.queryj>latest-SNAPSHOT</version.queryj>
     <version.queryj-sql>latest-SNAPSHOT</version.queryj-sql>
@@ -43,6 +39,35 @@
     <antlr4.visitor>true</antlr4.visitor>
     <antlr4.listener>true</antlr4.listener>
   </properties>
+
+  <scm>
+    <connection>scm:git:http://github.com/rydnr/acmsl-pom.git</connection>
+    <developerConnection>scm:git:http://github.com/rydnr/acmsl-pom.git</developerConnection>
+    <url>scm:git:http://github.com/rydnr/acmsl-pom.git</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <issueManagement>
+    <system>github</system>
+    <url>http://github.com/rydnr/acmsl-pom.git/</url>
+  </issueManagement>
+
+  <ciManagement>
+    <system>Hudson</system>
+    <url>http://jenkins.acm-sl.org/job/acmsl-pom</url>
+    <notifiers>
+      <notifier>
+        <type>mail</type>
+        <sendOnError>true</sendOnError>
+        <sendOnFailure>true</sendOnFailure>
+        <sendOnSuccess>true</sendOnSuccess>
+        <sendOnWarning>true</sendOnWarning>
+        <configuration>
+          <address>jenkins@acm-sl.org</address>
+        </configuration>
+      </notifier>
+    </notifiers>
+  </ciManagement>
 
   <repositories>
     <repository>
