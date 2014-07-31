@@ -294,6 +294,27 @@
         <artifactId>spring-jdbc</artifactId>
         <version>4.0.5.RELEASE</version>
       </dependency>
+
+      <dependency>
+        <groupId>oro</groupId>
+        <artifactId>oro</artifactId>
+        <version>2.0.8</version>
+      </dependency>
+      <dependency>
+        <groupId>gnu-regexp</groupId>
+        <artifactId>gnu-regexp</artifactId>
+        <version>1.1.4</version>
+      </dependency>
+      <dependency>
+        <groupId>jakarta-regexp</groupId>
+        <artifactId>jakarta-regexp</artifactId>
+        <version>1.3</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>3.1.0</version>
+      </dependency>
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
@@ -406,6 +427,12 @@
         <groupId>io.netty</groupId>
         <artifactId>netty-buffer</artifactId>
         <version>${version.netty}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>mx4j</groupId>
+        <artifactId>mx4j</artifactId>
+        <version>3.0.2</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
