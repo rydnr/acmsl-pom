@@ -31,7 +31,7 @@
     <version.antlr4>4.3</version.antlr4>
     <version.checkthread>1.0.9</version.checkthread>
     <version.powermock>1.5.5</version.powermock>
-    <version.oracle-driver>10.2.0.4.0</version.oracle-driver>
+    <version.oracle-driver>12.1.0.1</version.oracle-driver>
     <version.netty>5.0.0.Alpha1</version.netty>
 
     <!-- to ensure encoding is not platform-dependent -->
