@@ -36,8 +36,6 @@
 
     <!-- to ensure encoding is not platform-dependent -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <antlr4.visitor>true</antlr4.visitor>
-    <antlr4.listener>true</antlr4.listener>
   </properties>
 
   <scm>
@@ -472,7 +470,7 @@
           <dependencies>
             <dependency>
               <groupId>com.oracle</groupId>
-              <artifactId>oracle-driver</artifactId>
+              <artifactId>ojdbc14</artifactId>
               <version>${version.oracle-driver}</version>
             </dependency>
           </dependencies>
