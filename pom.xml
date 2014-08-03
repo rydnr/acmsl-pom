@@ -24,6 +24,9 @@
 
  <properties>
 
+    <version.major>3</version.major>
+    <version.minor>0</version.minor>
+
     <version.queryj>latest-SNAPSHOT</version.queryj>
     <version.queryj-sql>latest-SNAPSHOT</version.queryj-sql>
     <version.java-commons>latest-SNAPSHOT</version.java-commons>
@@ -51,7 +54,7 @@
   </issueManagement>
 
   <ciManagement>
-    <system>Hudson</system>
+    <system>Jenkins</system>
     <url>http://jenkins.acm-sl.org/job/acmsl-pom</url>
     <notifiers>
       <notifier>
