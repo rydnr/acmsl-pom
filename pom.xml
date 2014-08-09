@@ -6,7 +6,7 @@
   <groupId>org.acmsl</groupId>
   <artifactId>acmsl-pom</artifactId>
   <packaging>pom</packaging>
-  <version>latest-SNAPSHOT</version>
+  <version>3.0.42</version>
   <name>ACM S.L. POM</name>
   <url>http://www.acm-sl.org/projects/acmsl-pom</url>
   <inceptionYear>2014</inceptionYear>
@@ -28,8 +28,8 @@
     <version.minor>0</version.minor>
 
     <version.queryj>latest-SNAPSHOT</version.queryj>
-    <version.queryj-sql>latest-SNAPSHOT</version.queryj-sql>
-    <version.java-commons>latest-SNAPSHOT</version.java-commons>
+    <version.queryj-sql>3.0.36</version.queryj-sql>
+    <version.java-commons>3.0.35</version.java-commons>
 
     <antlr4.version>4.3</antlr4.version>
     <checkthread.version>1.0.9</checkthread.version>
