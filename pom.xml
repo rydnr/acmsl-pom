@@ -156,7 +156,7 @@
       </dependency>
       <dependency>
         <groupId>org.acmsl.queryj</groupId>
-        <artifactId>queryj-maven</artifactId>
+        <artifactId>queryj-maven-plugin</artifactId>
         <version>${version.queryj}</version>
       </dependency>
       <dependency>
@@ -169,7 +169,17 @@
         <artifactId>queryj-template-packaging-maven-plugin</artifactId>
         <version>${version.queryj}</version>
       </dependency>
-
+      <dependency>
+        <groupId>org.acmsl.queryj</groupId>
+        <artifactId>queryj-debugging</artifactId>
+        <version>${version.queryj}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.acmsl.queryj</groupId>
+        <artifactId>queryj-debugging-maven-plugin</artifactId>
+        <version>${version.queryj}</version>
+      </dependency>
+ 
       <dependency>
         <groupId>org.checkthread</groupId>
         <artifactId>checkthread-annotations</artifactId>
@@ -435,6 +445,13 @@
         <artifactId>mx4j</artifactId>
         <version>3.0.2</version>
       </dependency>
+
+      <dependency>
+        <groupId>org.apache.maven.shared</groupId>
+        <artifactId>maven-plugin-testing-harness</artifactId>
+        <version>1.0-beta-1</version>
+      </dependency>
+
     </dependencies>
   </dependencyManagement>
 
