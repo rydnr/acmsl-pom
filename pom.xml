@@ -146,27 +146,7 @@
       </dependency>
       <dependency>
         <groupId>org.acmsl.queryj</groupId>
-        <artifactId>queryj-test</artifactId>
-        <version>${version.queryj}</version>
-      </dependency>
-       <dependency>
-        <groupId>org.acmsl.queryj</groupId>
-        <artifactId>queryj-templates</artifactId>
-        <version>${version.queryj}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.acmsl.queryj</groupId>
-        <artifactId>queryj-maven-plugin</artifactId>
-        <version>${version.queryj}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.acmsl.queryj</groupId>
         <artifactId>queryj-template-packaging</artifactId>
-        <version>${version.queryj}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.acmsl.queryj</groupId>
-        <artifactId>queryj-template-packaging-maven-plugin</artifactId>
         <version>${version.queryj}</version>
       </dependency>
       <dependency>
@@ -176,10 +156,41 @@
       </dependency>
       <dependency>
         <groupId>org.acmsl.queryj</groupId>
+        <artifactId>queryj-test</artifactId>
+        <version>${version.queryj}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.acmsl.queryj</groupId>
+        <artifactId>queryj-ant-task</artifactId>
+        <version>${version.queryj}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.acmsl.queryj</groupId>
+        <artifactId>queryj-maven-plugin</artifactId>
+        <version>${version.queryj}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.acmsl.queryj</groupId>
+        <artifactId>queryj-template-packaging-maven-plugin</artifactId>
+        <version>${version.queryj}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.acmsl.queryj</groupId>
+        <artifactId>queryj-debugging-ant-task</artifactId>
+        <version>${version.queryj}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.acmsl.queryj</groupId>
         <artifactId>queryj-debugging-maven-plugin</artifactId>
         <version>${version.queryj}</version>
       </dependency>
  
+      <dependency>
+        <groupId>org.acmsl.queryj</groupId>
+        <artifactId>queryj-templates</artifactId>
+        <version>${version.queryj}</version>
+      </dependency>
+
       <dependency>
         <groupId>org.checkthread</groupId>
         <artifactId>checkthread-annotations</artifactId>
