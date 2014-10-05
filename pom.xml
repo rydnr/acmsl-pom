@@ -664,17 +664,17 @@
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>2.9.1</version>
         </plugin>
-      </plugins>
 
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>versions-maven-plugin</artifactId>
-        <version>2.1</version>
-        <configuration>
-          <allowSnapshots>false</allowSnapshots>
-          <excludeProperties>antlr4.version,checkthread.version,powermock.version,oracle-driver.version,netty.version,findbugs-maven-plugin.version,maven-pmd-plugin.version</excludeProperties>
-        </configuration>
-      </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>versions-maven-plugin</artifactId>
+          <version>2.1</version>
+          <configuration>
+            <allowSnapshots>false</allowSnapshots>
+            <excludeProperties>antlr4.version,checkthread.version,powermock.version,oracle-driver.version,netty.version,findbugs-maven-plugin.version,maven-pmd-plugin.version</excludeProperties>
+          </configuration>
+        </plugin>
+      </plugins>
     </pluginManagement>
 
   </build>
