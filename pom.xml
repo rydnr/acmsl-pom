@@ -22,10 +22,10 @@
     <url>http://www.acm-sl.org</url>
   </organization>
 
- <properties>
+  <properties>
 
     <version.major>3</version.major>
-    <version.minor>0</version.minor>
+    <version.minor>1</version.minor>
 
     <version.queryj>latest-SNAPSHOT</version.queryj>
     <version.queryj-sql>latest-SNAPSHOT</version.queryj-sql>
@@ -665,6 +665,16 @@
           <version>2.9.1</version>
         </plugin>
       </plugins>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <version>2.1</version>
+        <configuration>
+          <allowSnapshots>false</allowSnapshots>
+          <excludeProperties>antlr4.version,checkthread.version,powermock.version,oracle-driver.version,netty.version,findbugs-maven-plugin.version,maven-pmd-plugin.version</excludeProperties>
+        </configuration>
+      </plugin>
     </pluginManagement>
 
   </build>
