@@ -130,11 +130,12 @@
       <name>acmsl-libs-snapshots</name>
       <url>http://maven.acm-sl.org/libs-snapshots-local</url>
     </snapshotRepository>
-    <site>
+    <!-- site:deploy pending -->
+    <!--site>
       <id>github</id>
       <name>Github project</name>
       <url>http://github.com/rydnr/acmsl-pom</url>
-    </site>
+    </site-->
   </distributionManagement>
 
   <dependencyManagement>
