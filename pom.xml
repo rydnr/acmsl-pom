@@ -1,7 +1,7 @@
 <project
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.acmsl</groupId>
   <artifactId>acmsl-pom</artifactId>
@@ -132,10 +132,10 @@
     </snapshotRepository>
     <!-- site:deploy pending -->
     <!--site>
-      <id>github</id>
-      <name>Github project</name>
-      <url>http://github.com/rydnr/acmsl-pom</url>
-    </site-->
+        <id>github</id>
+        <name>Github project</name>
+        <url>http://github.com/rydnr/acmsl-pom</url>
+        </site-->
   </distributionManagement>
 
   <dependencyManagement>
@@ -190,7 +190,7 @@
         <artifactId>queryj-debugging-maven-plugin</artifactId>
         <version>${version.queryj}</version>
       </dependency>
- 
+      
       <dependency>
         <groupId>org.acmsl.queryj</groupId>
         <artifactId>queryj-templates</artifactId>
@@ -314,15 +314,15 @@
         <version>13.0</version>
       </dependency>
       <!--dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-core</artifactId>
-        <version>1.1.4</version>
-      </dependency-->
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-core</artifactId>
+          <version>1.1.4</version>
+          </dependency-->
       <!--dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-dao</artifactId>
-        <version>1.1.4</version>
-      </dependency-->
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-dao</artifactId>
+          <version>1.1.4</version>
+          </dependency-->
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-jdbc</artifactId>
@@ -411,14 +411,14 @@
         <version>${powermock.version}</version>
         <optional>true</optional>
       </dependency>
-    
+      
       <dependency>
         <groupId>org.powermock</groupId>
         <artifactId>powermock-core</artifactId>
         <version>${powermock.version}</version>
         <optional>true</optional>
       </dependency>
-    
+      
       <dependency>
         <groupId>org.powermock</groupId>
         <artifactId>powermock-api-easymock</artifactId>
@@ -532,9 +532,9 @@
                 <tasks>
                   <taskdef name="checkthread" classname="org.checkthread.anttask.CheckThreadTask" /> 
                   <checkthread 
-                    targetpath="${project.build.outputDirectory}/" 
-                    classpath="${project.build.outputDirectory}/" 
-                    verbose="true"/> 
+                      targetpath="${project.build.outputDirectory}/" 
+                      classpath="${project.build.outputDirectory}/" 
+                      verbose="true"/> 
                 </tasks>
                 <sourceRoot>${basedir}/src/main/java</sourceRoot>
               </configuration>
@@ -559,7 +559,7 @@
           <configuration>
             <useFile>false</useFile>
             <!--parallel>classes</parallel>
-            <threadCount>2</threadCount-->
+                <threadCount>2</threadCount-->
             <argLine>-Dqueryjroot=${queryjroot}</argLine>
           </configuration>
         </plugin>
@@ -627,7 +627,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-install-plugin</artifactId>
-          <version>2.5.1</version>
+          <version>2.5.2</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -685,4 +685,31 @@
 
   </build>
 
+  <profiles>
+    <profile>
+      <id>release</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <configuration>
+              <deployAtEnd>true</deployAtEnd>
+              <updateReleaseInfo>true</updateReleaseInfo>
+              <createChecksums>true</createChecksums>
+            </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-install-plugin</artifactId>
+            <configuration>
+              <installAtEnd>true</installAtEnd>
+              <updateReleaseInfo>true</updateReleaseInfo>
+              <createChecksums>true</createChecksums>
+            </configuration>
+          </plugin>      
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>
