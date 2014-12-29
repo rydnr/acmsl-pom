@@ -6,7 +6,7 @@
   <groupId>org.acmsl</groupId>
   <artifactId>acmsl-pom</artifactId>
   <packaging>pom</packaging>
-  <version>latest-SNAPSHOT</version>
+  <version>3.1.0078</version>
   <name>ACM S.L. POM</name>
   <url>http://www.acm-sl.org/projects/acmsl-pom</url>
   <inceptionYear>2014</inceptionYear>
@@ -28,9 +28,9 @@
     <version.minor>1</version.minor>
 
     <!-- Versions of the children -->
-    <version.queryj>latest-SNAPSHOT</version.queryj>
-    <version.queryj-sql>latest-SNAPSHOT</version.queryj-sql>
-    <version.java-commons>latest-SNAPSHOT</version.java-commons>
+    <version.queryj>3.1.0078</version.queryj>
+    <version.queryj-sql>3.1.0077</version.queryj-sql>
+    <version.java-commons>3.1.0074</version.java-commons>
 
     <javac.source>1.8</javac.source>
     <javac.target>1.8</javac.target>
@@ -47,7 +47,7 @@
     <!-- third-party versions -->
     <antlr4.version>4.3</antlr4.version>
     <checkthread.version>1.0.9</checkthread.version>
-    <powermock.version>1.5.5</powermock.version>
+    <powermock.version>1.6.0</powermock.version>
     <oracle-driver.version>12.1.0.1</oracle-driver.version>
     <netty.version>5.0.0.Alpha1</netty.version>
     <findbugs-maven-plugin.version>2.5.4</findbugs-maven-plugin.version>
