@@ -33,9 +33,23 @@
 
     <version.antlr4>4.3</version.antlr4>
     <version.checkthread>1.0.9</version.checkthread>
-    <version.powermock>1.5.5</version.powermock>
+    <version.powermock>1.6.1</version.powermock>
     <version.oracle-driver>12.1.0.1</version.oracle-driver>
     <version.netty>5.0.0.Alpha1</version.netty>
+    <version.maven-libs>3.2.5</version.maven-libs>
+    <version.maven-core>${version.maven-libs}</version.maven-core>
+    <version.maven-plugin-api>${version.maven-libs}</version.maven-plugin-api>
+    <version.maven-deploy-plugin>2.8.2</version.maven-deploy-plugin>
+    <version.junit>4.12</version.junit>
+    <version.cucumber-libs>1.2.2</version.cucumber-libs>
+    <version.cucumber-core>${version.cucumber-libs}</version.cucumber-core>
+    <version.cucumber-java>${version.cucumber-libs}</version.cucumber-java>
+    <version.cucumber-junit>${version.cucumber-libs}</version.cucumber-junit>
+    <version.commons-logging>1.2</version.commons-logging>
+    <version.maven-plugin-testing-harness>3.3.0</version.maven-plugin-testing-harness>
+    <version.maven-plugin-annotations>3.4</version.maven-plugin-annotations>
+    <version.aspectjrt>1.8.4</version.aspectjrt>
+    <version.easymock>3.3.1</version.easymock>
 
     <!-- to ensure encoding is not platform-dependent -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -74,28 +88,28 @@
     <repository>
       <id>acmsl-libs-releases</id>
       <name>acmsl-libs-releases</name>
-      <url>http://maven.acm-sl.org/artifactory/libs-release-local</url>
+      <url>http://maven.acm-sl.org/libs-releases-local</url>
       <releases><enabled>true</enabled></releases>
       <snapshots><enabled>false</enabled></snapshots>
     </repository>
     <repository>
       <id>acmsl-ext-releases</id>
       <name>acmsl-ext-releases</name>
-      <url>http://maven.acm-sl.org/artifactory/ext-release-local</url>
+      <url>http://maven.acm-sl.org/ext-releases-local</url>
       <releases><enabled>true</enabled></releases>
       <snapshots><enabled>false</enabled></snapshots>
     </repository>
     <repository>
       <id>acmsl-libs-snapshots</id>
       <name>acmsl-libs-snapshots</name>
-      <url>http://maven.acm-sl.org/artifactory/libs-snapshot-local</url>
+      <url>http://maven.acm-sl.org/libs-snapshots-local</url>
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </repository>
     <repository>
       <id>acmsl-ext-snapshots</id>
       <name>acmsl-ext-snapshots</name>
-      <url>http://maven.acm-sl.org/artifactory/ext-snapshot-local</url>
+      <url>http://maven.acm-sl.org/ext-snapshots-local</url>
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </repository>
@@ -104,14 +118,14 @@
     <pluginRepository>
       <id>acmsl-plugins-releases</id>
       <name>acmsl-plugins-releases</name>
-      <url>http://maven.acm-sl.org/artifactory/plugins-release-local</url>
+      <url>http://maven.acm-sl.org/plugins-releases-local</url>
       <releases><enabled>true</enabled></releases>
       <snapshots><enabled>false</enabled></snapshots>
     </pluginRepository>
     <pluginRepository>
       <id>acmsl-plugins-snapshots</id>
       <name>acmsl-plugins-snapshots</name>
-      <url>http://maven.acm-sl.org/artifactory/plugins-snapshot-local</url>
+      <url>http://maven.acm-sl.org/plugins-snapshots-local</url>
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </pluginRepository>
@@ -121,12 +135,12 @@
     <repository>
       <id>acmsl-libs-releases</id>
       <name>acmsl-libs-releases</name>
-      <url>http://maven.acm-sl.org/artifactory/libs-release-local</url>
+      <url>http://maven.acm-sl.org/libs-releases-local</url>
     </repository>
     <snapshotRepository>
       <id>acmsl-plugins-snapshots</id>
       <name>acmsl-libs-snapshots</name>
-      <url>http://maven.acm-sl.org/artifactory/libs-snapshot-local</url>
+      <url>http://maven.acm-sl.org/libs-snapshots-local</url>
     </snapshotRepository>
   </distributionManagement>
 
@@ -167,7 +181,6 @@
         <artifactId>queryj-template-packaging-maven-plugin</artifactId>
         <version>${version.queryj}</version>
       </dependency>
-
       <dependency>
         <groupId>org.checkthread</groupId>
         <artifactId>checkthread-annotations</artifactId>
@@ -196,17 +209,17 @@
       <dependency>
         <groupId>org.apache.maven</groupId>
         <artifactId>maven-plugin-api</artifactId>
-        <version>3.2.1</version>
+        <version>${version.maven-plugin-api}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.maven</groupId>
         <artifactId>maven-core</artifactId>
-        <version>3.2.1</version>
+        <version>${version.maven-core}</version>
       </dependency>
       <dependency>
         <groupId>commons-logging</groupId>
         <artifactId>commons-logging</artifactId>
-        <version>1.1.3</version>
+        <version>${version.commons-logging}</version>
       </dependency>
       <dependency>
         <groupId>com.oracle</groupId>
@@ -292,9 +305,8 @@
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-jdbc</artifactId>
-        <version>4.0.5.RELEASE</version>
+        <version>4.1.4.RELEASE</version>
       </dependency>
-
       <dependency>
         <groupId>oro</groupId>
         <artifactId>oro</artifactId>
@@ -318,7 +330,7 @@
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
-        <version>4.11</version>
+        <version>${version.junit}</version>
       </dependency>
       <dependency>
         <groupId>info.cukes</groupId>
@@ -328,7 +340,7 @@
       <dependency>
         <groupId>info.cukes</groupId>
         <artifactId>cucumber-core</artifactId>
-        <version>1.1.7</version>
+        <version>${version.cucumber-core}</version>
       </dependency>
       <dependency>
         <groupId>info.cukes</groupId>
@@ -348,12 +360,12 @@
       <dependency>
         <groupId>info.cukes</groupId>
         <artifactId>cucumber-java</artifactId>
-        <version>1.1.7</version>
+        <version>${version.cucumber-java}</version>
       </dependency>
       <dependency>
         <groupId>info.cukes</groupId>
         <artifactId>cucumber-junit</artifactId>
-        <version>1.1.7</version>
+        <version>${version.cucumber-junit}</version>
       </dependency>
       <dependency>
         <groupId>com.rubiconproject.oss</groupId>
@@ -370,54 +382,46 @@
         <artifactId>commons-configuration</artifactId>
         <version>1.10</version>
       </dependency>
-
       <dependency>
         <groupId>org.apache.maven.plugin-tools</groupId>
         <artifactId>maven-plugin-annotations</artifactId>
-        <version>3.3</version>
+        <version>${version.maven-plugin-annotations}</version>
       </dependency>
-
       <dependency>
         <groupId>org.powermock</groupId>
         <artifactId>powermock-module-junit4</artifactId>
         <version>${version.powermock}</version>
         <optional>true</optional>
       </dependency>
-    
       <dependency>
         <groupId>org.powermock</groupId>
         <artifactId>powermock-core</artifactId>
         <version>${version.powermock}</version>
         <optional>true</optional>
       </dependency>
-    
       <dependency>
         <groupId>org.powermock</groupId>
         <artifactId>powermock-api-easymock</artifactId>
         <version>${version.powermock}</version>
         <optional>true</optional>
       </dependency>
-
       <dependency>
         <groupId>org.easymock</groupId>
         <artifactId>easymock</artifactId>
-        <version>3.2</version>
+        <version>${version.easymock}</version>
         <optional>true</optional>
       </dependency>
-
       <dependency>
         <groupId>org.jdogma.junit</groupId>
         <artifactId>configurable-parallel-computer</artifactId>
         <version>1.5</version>
         <optional>true</optional>
       </dependency>
-
       <dependency>
         <groupId>org.aspectj</groupId>
         <artifactId>aspectjrt</artifactId>
-        <version>1.8.0</version>
+        <version>${version.aspectjrt}</version>
       </dependency>
-
       <dependency>
         <groupId>io.netty</groupId>
         <artifactId>netty-transport</artifactId>
@@ -428,11 +432,20 @@
         <artifactId>netty-buffer</artifactId>
         <version>${version.netty}</version>
       </dependency>
-
       <dependency>
         <groupId>mx4j</groupId>
         <artifactId>mx4j</artifactId>
         <version>3.0.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.maven.plugin-testing</groupId>
+        <artifactId>maven-plugin-testing-harness</artifactId>
+        <version>${version.maven-plugin-testing-harness}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>${version.maven-deploy-plugin}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -561,7 +574,7 @@
             <dependency>
               <groupId>org.aspectj</groupId>
               <artifactId>aspectjrt</artifactId>
-              <version>1.8.0</version>
+              <version>${version.aspectjrt}</version>
             </dependency>
             <dependency>
               <groupId>org.aspectj</groupId>
@@ -583,7 +596,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>2.8.1</version>
+          <version>${version.maven-deploy-plugin}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
