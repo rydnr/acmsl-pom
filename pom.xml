@@ -42,6 +42,7 @@
     <version.maven-plugin-api>${version.maven-libs}</version.maven-plugin-api>
     <version.maven-compat>${version.maven-libs}</version.maven-compat>
     <version.maven-deploy-plugin>2.8.2</version.maven-deploy-plugin>
+    <version.maven-patch-plugin>1.1.1</version.maven-patch-plugin>
     <version.junit>4.12</version.junit>
     <version.cucumber-libs>1.2.2</version.cucumber-libs>
     <version.cucumber-core>${version.cucumber-libs}</version.cucumber-core>
@@ -141,7 +142,6 @@
     <version.aspectj-maven-plugin>1.7</version.aspectj-maven-plugin>
     <version.aspectjrt>1.8.2</version.aspectjrt>
     <version.aspectjtools>1.8.2.1-SNAPSHOT</version.aspectjtools>
->>>>>>> 1a79158c43cc8ee3aaa0513ccf406c8963cfbe14
 
   </properties>
 
@@ -282,8 +282,6 @@
         <artifactId>queryj-template-packaging-maven-plugin</artifactId>
         <version>${version.queryj}</version>
       </dependency>
-<<<<<<< HEAD
-=======
       <dependency>
         <groupId>org.acmsl.queryj</groupId>
         <artifactId>queryj-debugging-ant-task</artifactId>
@@ -294,14 +292,11 @@
         <artifactId>queryj-debugging-maven-plugin</artifactId>
         <version>${version.queryj}</version>
       </dependency>
-      
       <dependency>
         <groupId>org.acmsl.queryj</groupId>
         <artifactId>queryj-templates</artifactId>
         <version>${version.queryj}</version>
       </dependency>
-
->>>>>>> 1a79158c43cc8ee3aaa0513ccf406c8963cfbe14
       <dependency>
         <groupId>org.checkthread</groupId>
         <artifactId>checkthread-annotations</artifactId>
@@ -340,7 +335,7 @@
       <dependency>
         <groupId>org.apache.maven.plugin-tools</groupId>
         <artifactId>maven-plugin-annotations</artifactId>
-        <version>3.3</version>
+        <version>${version.maven-plugin-annotations}</version>
       </dependency>
       <dependency>
         <groupId>commons-logging</groupId>
@@ -507,11 +502,6 @@
         <groupId>commons-configuration</groupId>
         <artifactId>commons-configuration</artifactId>
         <version>1.10</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.maven.plugin-tools</groupId>
-        <artifactId>maven-plugin-annotations</artifactId>
-        <version>${version.maven-plugin-annotations}</version>
       </dependency>
       <dependency>
         <groupId>org.powermock</groupId>
@@ -820,20 +810,6 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>${version.maven-deploy-plugin}</version>
-          <executions>
-            <execution>
-              <id>deploy-dockerfile</id>
-              <goals>
-                <goal>deploy-file</goal>
-              </goals>
-              <configuration>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>${project.artifactId}</artifactId>
-                <version>${project.version}</version>
-                <file>${project.build.outputDirectory}/META-INF/Dockerfile</file>
-              </configuration>
-            </execution>
-          </executions>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
@@ -934,7 +910,7 @@
           <version>${version.versions-maven-plugin}</version>
           <configuration>
 	    <allowSnapshots>false</allowSnapshots>
-	    <excludeProperties>version.spring,version.aspectj-maven-plugin,version.aspectjrt,version.oracle-driver,version.asm,version.findbugs,version.findbugs-annotations,version.jetty9,version.jetty,version.jetty4,version.jetty-maven-plugin,version.jetty-jspc-maven-plugin,version.findbugs-maven-plugin,version.jersey,version.glassfish-hk2,version.build-helper-maven-plugin,version.clirr-maven-plugin,version.commons-dbcp,version.commons-pool,version.grails,version.httpclient,version.httpcore,version.jca,version.json-simple,version.jstl,version.maven-assembly-plugin,version.maven-changes-plugin,version.maven-checkstyle-plugin,version.maven-clean-plugin,version.maven-compiler-plugin,version.maven-dependency-plugin,version.maven-deploy-plugin,version.maven-eclipse-plugin,version.maven-enforcer-plugin,version.maven-failsafe-plugin,version.maven-help-plugin,version.maven-install-plugin,version.maven-jar-plugin,version.maven-jardiff-plugin,version.maven-javadoc-plugin,version.jdiff-maven-plugin,version.maven-plugin-plugin,version.maven-pmd-plugin,version.maven-project-info-reports-plugin,version.maven-reactor-plugin,version.maven-release-plugin,version.maven-resources-plugin,version.maven-site-plugin,version.maven-source-plugin,version.maven-surefire-plugin,version.maven-war-plugin,version.mockito,version.powermock,version.selenium,version.slf4j,version.versions-maven-plugin,version.aspectj,version.maven-compat</excludeProperties>
+	    <excludeProperties>version.spring,version.aspectj-maven-plugin,version.aspectjrt,version.oracle-driver,version.asm,version.findbugs,version.findbugs-annotations,version.jetty9,version.jetty,version.jetty4,version.jetty-maven-plugin,version.jetty-jspc-maven-plugin,version.findbugs-maven-plugin,version.jersey,version.glassfish-hk2,version.build-helper-maven-plugin,version.clirr-maven-plugin,version.commons-dbcp,version.commons-pool,version.grails,version.httpclient,version.httpcore,version.jca,version.json-simple,version.jstl,version.maven-assembly-plugin,version.maven-changes-plugin,version.maven-checkstyle-plugin,version.maven-clean-plugin,version.maven-compiler-plugin,version.maven-dependency-plugin,version.maven-deploy-plugin,version.maven-eclipse-plugin,version.maven-enforcer-plugin,version.maven-failsafe-plugin,version.maven-help-plugin,version.maven-install-plugin,version.maven-jar-plugin,version.maven-jardiff-plugin,version.maven-javadoc-plugin,version.jdiff-maven-plugin,version.maven-plugin-plugin,version.maven-pmd-plugin,version.maven-project-info-reports-plugin,version.maven-reactor-plugin,version.maven-release-plugin,version.maven-resources-plugin,version.maven-site-plugin,version.maven-source-plugin,version.maven-surefire-plugin,version.maven-war-plugin,version.mockito,version.powermock,version.selenium,version.slf4j,version.versions-maven-plugin,version.aspectj,version.maven-compat,version.maven-patch-plugin</excludeProperties>
           </configuration>
         </plugin>
         <plugin>
@@ -1027,13 +1003,8 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-<<<<<<< HEAD
-          <artifactId>maven-deploy-plugin</artifactId>
-          <version>${version.maven-deploy-plugin}</version>
-=======
           <artifactId>maven-patch-plugin</artifactId>
-          <version>1.1.1</version>
->>>>>>> 1a79158c43cc8ee3aaa0513ccf406c8963cfbe14
+          <version>${version.maven-patch-plugin}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
