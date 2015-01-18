@@ -6,7 +6,7 @@
   <groupId>org.acmsl</groupId>
   <artifactId>acmsl-pom</artifactId>
   <packaging>pom</packaging>
-  <version>latest-SNAPSHOT</version>
+  <version>3.1.93</version>
   <name>ACM S.L. POM</name>
   <url>http://www.acm-sl.org/projects/acmsl-pom</url>
   <inceptionYear>2014</inceptionYear>
@@ -28,9 +28,9 @@
     <version.minor>1</version.minor>
 
     <!-- Versions of the children -->
-    <version.queryj>latest-SNAPSHOT</version.queryj>
-    <version.queryj-sql>latest-SNAPSHOT</version.queryj-sql>
-    <version.java-commons>latest-SNAPSHOT</version.java-commons>
+    <version.queryj>3.1.93</version.queryj>
+    <version.queryj-sql>3.1.90</version.queryj-sql>
+    <version.java-commons>3.1.89</version.java-commons>
 
     <version.antlr4>4.3</version.antlr4>
     <version.checkthread>1.0.9</version.checkthread>
@@ -43,7 +43,7 @@
     <version.maven-compat>${version.maven-libs}</version.maven-compat>
     <version.maven-deploy-plugin>2.8.2</version.maven-deploy-plugin>
     <version.maven-patch-plugin>1.1.1</version.maven-patch-plugin>
-    <version.junit>4.11</version.junit>
+    <version.junit>4.12</version.junit>
     <version.cucumber-libs>1.2.2</version.cucumber-libs>
     <version.cucumber-core>${version.cucumber-libs}</version.cucumber-core>
     <version.cucumber-java>${version.cucumber-libs}</version.cucumber-java>
@@ -69,7 +69,7 @@
     <!-- third-party versions -->
     <antlr4.version>4.3</antlr4.version>
     <checkthread.version>1.0.9</checkthread.version>
-    <powermock.version>1.5.5</powermock.version>
+    <powermock.version>1.6.1</powermock.version>
     <oracle-driver.version>12.1.0.1</oracle-driver.version>
     <netty.version>5.0.0.Alpha1</netty.version>
     <findbugs-maven-plugin.version>2.5.4</findbugs-maven-plugin.version>
