@@ -31,6 +31,9 @@
     <version.queryj>latest-SNAPSHOT</version.queryj>
     <version.queryj-sql>latest-SNAPSHOT</version.queryj-sql>
     <version.java-commons>latest-SNAPSHOT</version.java-commons>
+    <version.ST4-rydnr>latest-SNAPSHOT</version.ST4-rydnr>
+    <version.devdel>latest-SNAPSHOT</version.devdel>
+    <version.javacss>latest-SNAPSHOT</version.javacss>
 
     <version.antlr4>4.3</version.antlr4>
     <version.checkthread>1.0.9</version.checkthread>
@@ -68,7 +71,6 @@
 
     <!-- third-party versions -->
     <antlr4.version>4.3</antlr4.version>
-    <checkthread.version>1.0.9</checkthread.version>
     <powermock.version>1.5.5</powermock.version>
     <oracle-driver.version>12.1.0.1</oracle-driver.version>
     <netty.version>5.0.0.Alpha1</netty.version>
@@ -298,11 +300,6 @@
         <version>${version.queryj}</version>
       </dependency>
       <dependency>
-        <groupId>org.checkthread</groupId>
-        <artifactId>checkthread-annotations</artifactId>
-        <version>${checkthread.version}</version>
-      </dependency>
-      <dependency>
         <groupId>org.acmsl.queryj</groupId>
         <artifactId>queryj-sql</artifactId>
         <version>${version.queryj-sql}</version>
@@ -313,6 +310,26 @@
         <version>${version.java-commons}</version>
       </dependency>
       <dependency>
+        <groupId>org.acmsl</groupId>
+        <artifactId>devdel</artifactId>
+        <version>${version.devdel}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.antlr</groupId>
+        <artifactId>ST4-rydnr</artifactId>
+        <version>${version.ST4-rydnr}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.antlr</groupId>
+        <artifactId>javacss</artifactId>
+        <version>${version.javacss}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.checkthread</groupId>
+        <artifactId>checkthread-annotations</artifactId>
+        <version>${version.checkthread}</version>
+      </dependency>
+       <dependency>
         <groupId>log4j</groupId>
         <artifactId>log4j</artifactId>
         <version>1.2.17</version>
