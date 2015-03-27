@@ -35,7 +35,6 @@
     <version.devdel>latest-SNAPSHOT</version.devdel>
     <version.javacss>latest-SNAPSHOT</version.javacss>
 
-    <version.antlr4>4.3</version.antlr4>
     <version.checkthread>1.0.9</version.checkthread>
     <version.powermock>1.6.1</version.powermock>
     <version.oracle-driver>12.1.0.1</version.oracle-driver>
@@ -320,7 +319,7 @@
         <version>${version.ST4-rydnr}</version>
       </dependency>
       <dependency>
-        <groupId>org.antlr</groupId>
+        <groupId>org.acmsl</groupId>
         <artifactId>javacss</artifactId>
         <version>${version.javacss}</version>
       </dependency>
