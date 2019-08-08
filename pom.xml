@@ -36,6 +36,7 @@
     <version.javacss>latest-SNAPSHOT</version.javacss>
 
     <version.checkthread>1.0.9</version.checkthread>
+    <version.lombok>1.16.12</version.lombok>
     <version.powermock>1.6.1</version.powermock>
     <version.oracle-driver>12.1.0.1</version.oracle-driver>
     <version.netty>5.0.0.Alpha1</version.netty>
@@ -56,8 +57,8 @@
     <version.aspectjrt>1.8.4</version.aspectjrt>
     <version.easymock>3.3.1</version.easymock>
 
-    <javac.source>1.7</javac.source>
-    <javac.target>1.7</javac.target>
+    <javac.source>1.8</javac.source>
+    <javac.target>1.8</javac.target>
 
     <!-- define encoding for files (see:
          http://docs.codehaus.org/display/MAVENUSER/POM+Element+for+Source+File+Encoding)
@@ -204,6 +205,10 @@
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </repository>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
   </repositories>
   <pluginRepositories>
     <pluginRepository>
@@ -220,7 +225,11 @@
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </pluginRepository>
-  </pluginRepositories>
+    <pluginRepository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </pluginRepository>
+   </pluginRepositories>
 
   <distributionManagement>
     <repository>
@@ -233,12 +242,6 @@
       <name>acmsl-libs-snapshots</name>
       <url>http://maven.acm-sl.org/libs-snapshots-local</url>
     </snapshotRepository>
-    <!-- site:deploy pending -->
-    <!--site>
-        <id>github</id>
-        <name>Github project</name>
-        <url>http://github.com/rydnr/acmsl-pom</url>
-        </site-->
   </distributionManagement>
 
   <dependencyManagement>
@@ -584,6 +587,11 @@
         <artifactId>maven-compat</artifactId>
         <version>${version.maven-compat}</version>
       </dependency>
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${version.lombok}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -605,11 +613,11 @@
           <artifactId>maven-install-plugin</artifactId>
           <version>${version.maven-install-plugin}</version>
         </plugin>
-	<plugin>
-	  <groupId>org.apache.maven.plugins</groupId>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-shade-plugin</artifactId>
-	  <version>${version.maven-shade-plugin}</version>
-	</plugin>
+          <version>${version.maven-shade-plugin}</version>
+        </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
@@ -677,7 +685,7 @@
         <plugin>
           <groupId>org.mortbay.jetty</groupId>
           <artifactId>jetty-jspc-maven-plugin</artifactId>
-	  <version>${version.jetty-jspc-maven-plugin}</version>
+          <version>${version.jetty-jspc-maven-plugin}</version>
           <executions>
             <execution>
               <id>jspc</id>
@@ -767,11 +775,11 @@
             </dependency>
           </dependencies>
         </plugin>
-	<plugin>
+        <plugin>
           <groupId>org.jboss.shrinkwrap.resolver</groupId>
           <artifactId>shrinkwrap-resolver-maven-plugin</artifactId>
           <version>2.1.1</version>
-	</plugin>
+        </plugin>
 
         <!--plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -851,7 +859,7 @@
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>aspectj-maven-plugin</artifactId>
           <version>${version.aspectj-maven-plugin}</version>
-	  <dependencies>
+          <dependencies>
             <dependency>
               <groupId>org.aspectj</groupId>
               <artifactId>aspectjrt</artifactId>
@@ -925,8 +933,8 @@
           <artifactId>versions-maven-plugin</artifactId>
           <version>${version.versions-maven-plugin}</version>
           <configuration>
-	    <allowSnapshots>false</allowSnapshots>
-	    <excludeProperties>version.spring,version.aspectj-maven-plugin,version.aspectjrt,version.oracle-driver,version.asm,version.findbugs,version.findbugs-annotations,version.jetty9,version.jetty,version.jetty4,version.jetty-maven-plugin,version.jetty-jspc-maven-plugin,version.findbugs-maven-plugin,version.jersey,version.glassfish-hk2,version.build-helper-maven-plugin,version.clirr-maven-plugin,version.commons-dbcp,version.commons-pool,version.grails,version.httpclient,version.httpcore,version.jca,version.json-simple,version.jstl,version.maven-assembly-plugin,version.maven-changes-plugin,version.maven-checkstyle-plugin,version.maven-clean-plugin,version.maven-compiler-plugin,version.maven-dependency-plugin,version.maven-deploy-plugin,version.maven-eclipse-plugin,version.maven-enforcer-plugin,version.maven-failsafe-plugin,version.maven-help-plugin,version.maven-install-plugin,version.maven-jar-plugin,version.maven-jardiff-plugin,version.maven-javadoc-plugin,version.jdiff-maven-plugin,version.maven-plugin-plugin,version.maven-pmd-plugin,version.maven-project-info-reports-plugin,version.maven-reactor-plugin,version.maven-release-plugin,version.maven-resources-plugin,version.maven-site-plugin,version.maven-source-plugin,version.maven-surefire-plugin,version.maven-war-plugin,version.mockito,version.powermock,version.selenium,version.slf4j,version.versions-maven-plugin,version.aspectj,version.maven-compat,version.maven-patch-plugin</excludeProperties>
+            <allowSnapshots>false</allowSnapshots>
+            <excludeProperties>version.spring,version.aspectj-maven-plugin,version.aspectjrt,version.oracle-driver,version.asm,version.findbugs,version.findbugs-annotations,version.jetty9,version.jetty,version.jetty4,version.jetty-maven-plugin,version.jetty-jspc-maven-plugin,version.findbugs-maven-plugin,version.jersey,version.glassfish-hk2,version.build-helper-maven-plugin,version.clirr-maven-plugin,version.commons-dbcp,version.commons-pool,version.grails,version.httpclient,version.httpcore,version.jca,version.json-simple,version.jstl,version.maven-assembly-plugin,version.maven-changes-plugin,version.maven-checkstyle-plugin,version.maven-clean-plugin,version.maven-compiler-plugin,version.maven-dependency-plugin,version.maven-deploy-plugin,version.maven-eclipse-plugin,version.maven-enforcer-plugin,version.maven-failsafe-plugin,version.maven-help-plugin,version.maven-install-plugin,version.maven-jar-plugin,version.maven-jardiff-plugin,version.maven-javadoc-plugin,version.jdiff-maven-plugin,version.maven-plugin-plugin,version.maven-pmd-plugin,version.maven-project-info-reports-plugin,version.maven-reactor-plugin,version.maven-release-plugin,version.maven-resources-plugin,version.maven-site-plugin,version.maven-source-plugin,version.maven-surefire-plugin,version.maven-war-plugin,version.mockito,version.powermock,version.selenium,version.slf4j,version.versions-maven-plugin,version.aspectj,version.maven-compat,version.maven-patch-plugin</excludeProperties>
           </configuration>
         </plugin>
         <plugin>
@@ -954,7 +962,7 @@
             <argLine>-Xms512m -Xmx1024m -XX:MaxPermSize=512m -Duser.country=en -Duser.language=en -Dqueryjroot=${queryjroot}</argLine>
             <maxmem>1024</maxmem>
   	    <forkCount>1</forkCount>
-	    <reuseForks>true</reuseForks>
+            <reuseForks>true</reuseForks>
             <excludedGroups>org.junit.Test</excludedGroups>
             <useFile>false</useFile>
             <!--parallel>classes</parallel>
@@ -1494,6 +1502,19 @@
               <id>default-execution</id>
               <goals>
                 <goal>prepare</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.projectlombok</groupId>
+          <artifactId>lombok-maven-plugin</artifactId>
+          <version>${version.lombok}</version>
+          <executions>
+            <execution>
+              <phase>generate-sources</phase>
+              <goals>
+                <goal>delombok</goal>
               </goals>
             </execution>
           </executions>
