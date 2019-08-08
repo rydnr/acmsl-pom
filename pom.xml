@@ -180,28 +180,28 @@
     <repository>
       <id>acmsl-libs-releases</id>
       <name>acmsl-libs-releases</name>
-      <url>http://maven.acm-sl.org/libs-releases-local</url>
+      <url>http://maven.acm-sl.org/repository/libs-releases-local</url>
       <releases><enabled>true</enabled></releases>
       <snapshots><enabled>false</enabled></snapshots>
     </repository>
     <repository>
       <id>acmsl-ext-releases</id>
       <name>acmsl-ext-releases</name>
-      <url>http://maven.acm-sl.org/ext-releases-local</url>
+      <url>http://maven.acm-sl.org/repository/ext-releases-local</url>
       <releases><enabled>true</enabled></releases>
       <snapshots><enabled>false</enabled></snapshots>
     </repository>
     <repository>
       <id>acmsl-libs-snapshots</id>
       <name>acmsl-libs-snapshots</name>
-      <url>http://maven.acm-sl.org/libs-snapshots-local</url>
+      <url>http://maven.acm-sl.org/repository/libs-snapshots-local</url>
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </repository>
     <repository>
       <id>acmsl-ext-snapshots</id>
       <name>acmsl-ext-snapshots</name>
-      <url>http://maven.acm-sl.org/ext-snapshots-local</url>
+      <url>http://maven.acm-sl.org/repository/ext-snapshots-local</url>
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </repository>
@@ -214,14 +214,14 @@
     <pluginRepository>
       <id>acmsl-plugins-releases</id>
       <name>acmsl-plugins-releases</name>
-      <url>http://maven.acm-sl.org/plugins-releases-local</url>
+      <url>http://maven.acm-sl.org/repository/plugins-releases-local</url>
       <releases><enabled>true</enabled></releases>
       <snapshots><enabled>false</enabled></snapshots>
     </pluginRepository>
     <pluginRepository>
       <id>acmsl-plugins-snapshots</id>
       <name>acmsl-plugins-snapshots</name>
-      <url>http://maven.acm-sl.org/plugins-snapshots-local</url>
+      <url>http://maven.acm-sl.org/repository/plugins-snapshots-local</url>
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </pluginRepository>
@@ -235,12 +235,12 @@
     <repository>
       <id>acmsl-libs-releases</id>
       <name>acmsl-libs-releases</name>
-      <url>http://maven.acm-sl.org/libs-releases-local</url>
+      <url>http://maven.acm-sl.org/repository/libs-releases-local</url>
     </repository>
     <snapshotRepository>
       <id>acmsl-libs-snapshots</id>
       <name>acmsl-libs-snapshots</name>
-      <url>http://maven.acm-sl.org/libs-snapshots-local</url>
+      <url>http://maven.acm-sl.org/repository/libs-snapshots-local</url>
     </snapshotRepository>
   </distributionManagement>
 
