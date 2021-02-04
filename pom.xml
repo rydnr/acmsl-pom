@@ -46,7 +46,7 @@
     <version.maven-compat>${version.maven-libs}</version.maven-compat>
     <version.maven-deploy-plugin>2.8.2</version.maven-deploy-plugin>
     <version.maven-patch-plugin>1.1.1</version.maven-patch-plugin>
-    <version.junit>4.11</version.junit>
+    <version.junit>4.13.1</version.junit>
     <version.cucumber-libs>1.2.2</version.cucumber-libs>
     <version.cucumber-core>${version.cucumber-libs}</version.cucumber-core>
     <version.cucumber-java>${version.cucumber-libs}</version.cucumber-java>
