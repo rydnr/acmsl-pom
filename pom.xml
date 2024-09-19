@@ -34,6 +34,7 @@
     <version.ST4-rydnr>latest-SNAPSHOT</version.ST4-rydnr>
     <version.devdel>latest-SNAPSHOT</version.devdel>
     <version.javacss>latest-SNAPSHOT</version.javacss>
+    <version.k8s-nix>latest-SNAPSHOT</version.k8s-nix>
 
     <version.checkthread>1.0.9</version.checkthread>
     <version.lombok>1.16.12</version.lombok>
@@ -57,6 +58,8 @@
     <version.aspectjrt>1.8.4</version.aspectjrt>
     <version.easymock>3.3.1</version.easymock>
 
+    <version.maven>3.2.1</version.maven>
+
     <javac.source>1.8</javac.source>
     <javac.target>1.8</javac.target>
 
@@ -70,80 +73,195 @@
     <maven.build.timestamp.format>D</maven.build.timestamp.format><!-- D means 'day in year' -->
 
     <!-- third-party versions -->
-    <antlr4.version>4.3</antlr4.version>
-    <powermock.version>1.5.5</powermock.version>
-    <oracle-driver.version>12.1.0.1</oracle-driver.version>
-    <netty.version>5.0.0.Alpha1</netty.version>
-    <findbugs-maven-plugin.version>2.5.4</findbugs-maven-plugin.version>
-    <maven-pmd-plugin.version>3.1</maven-pmd-plugin.version>
-    <version.maven-release-plugin>2.5.1</version.maven-release-plugin>
 
-    <version.oracle-driver>1.6.11.2.0.3</version.oracle-driver>
+    <version.antlr4>4.3</version.antlr4>
+    <version.asm>9.7</version.asm>
+    <version.aspectjrt>1.9.22.1</version.aspectjrt>
+    <version.aspectjtools>1.9.22.1</version.aspectjtools>
 
-    <version.asm>3.3.1</version.asm>
-    <version.findbugs>2.0.3</version.findbugs>
-    <version.findbugs-annotations>1.0.0</version.findbugs-annotations>
-    <version.jetty9>9.2.2.v20140723</version.jetty9>
+    <version.checkthread>1.0.9</version.checkthread>
+    <version.commons-dbcp>2.12.0</version.commons-dbcp>
+    <version.commons-logging>1.3.4</version.commons-logging>
+    <version.commons-pool>2.12.0</version.commons-pool>
+    <version.cucumber-core>7.18.1</version.cucumber-core>
+    <version.cucumber-java>${version.cucumber-core}</version.cucumber-java>
+    <version.cucumber-junit>${version.cucumber-core}</version.cucumber-junit>
+
+    <version.easymock>5.4.0</version.easymock>
+    <version.ehcache>3.10.8</version.ehcache>
+    
+    <version.spotbugs>4.8.6</version.spotbugs>
+    <version.spotbugs-annotations>${version.spotbugs}</version.spotbugs-annotations>
+    <version.findbugs-maven-plugin>3.0.5</version.findbugs-maven-plugin>
+
+    <version.httpclient>5.3.1</version.httpclient>
+    <version.httpcore>4.3.2</version.httpcore>
+
+    <version.jca>2.1.0</version.jca>
+    <version.jersey>3.1.8</version.jersey>
     <version.jetty>8.1.16.v20140903</version.jetty>
+    <version.jetty9>9.2.2.v20140723</version.jetty9>
     <version.jetty4>4.2.17</version.jetty4>
     <version.jetty-maven-plugin>${version.jetty}</version.jetty-maven-plugin>
     <version.jetty-jspc-maven-plugin>${version.jetty}</version.jetty-jspc-maven-plugin>
-    <version.findbugs-maven-plugin>2.5.4</version.findbugs-maven-plugin>
-    <version.jersey>2.0</version.jersey>
-    <version.glassfish-hk2>2.1.88</version.glassfish-hk2>
-    <version.ehcache>2.4.7</version.ehcache>
-
-    <version.build-helper-maven-plugin>1.9.1</version.build-helper-maven-plugin>
-    <version.clirr-maven-plugin>2.6.1</version.clirr-maven-plugin>
-    <version.commons-dbcp>1.4</version.commons-dbcp>
-    <version.commons-pool>1.6</version.commons-pool>
-    <version.grails>1.3.7</version.grails>
-    <version.httpclient>4.3.4</version.httpclient>
-    <version.httpcore>4.3.2</version.httpcore>
-    <version.jca>1.5</version.jca>
     <version.json-simple>1.1</version.json-simple>
     <version.jstl>1.2.1</version.jstl>
+    <version.junit>4.11</version.junit>
+
+    <version.lombok>1.18.2.0</version.lombok>
+    <version.lombok-maven-plugin>1.18.2.0</version.lombok-maven-plugin>
 
     <!-- See http://maven.apache.org/plugins/index.html -->
+    <!-- and https://www.mojohaus.org/plugins.html -->
 
-    <version.maven-assembly-plugin>2.5</version.maven-assembly-plugin>
-    <version.maven-changes-plugin>2.11</version.maven-changes-plugin>
-    <version.maven-checkstyle-plugin>2.12.1</version.maven-checkstyle-plugin>
-    <version.maven-clean-plugin>2.6</version.maven-clean-plugin>
-    <version.maven-compiler-plugin>3.2</version.maven-compiler-plugin>
-    <version.maven-dependency-plugin>2.9</version.maven-dependency-plugin>
-    <version.maven-deploy-plugin>2.8.2</version.maven-deploy-plugin>
+    <version.animal-sniffer-maven-plugin>1.20</version.animal-sniffer-maven-plugin>
+    <version.antlr-maven-plugin>2.2</version.antlr-maven-plugin>
+    <version.apt-maven-plugin>1.0-alpha-5</version.apt-maven-plugin>
+    <version.cbuilds-maven-plugin>1.0-beta-1</version.cbuilds-maven-plugin>
+    <version.dbunit-maven-plugin>1.0-beta-3</version.dbunit-maven-plugin>
+    <version.enchanter-maven-plugin>1.0-beta-1</version.enchanter-maven-plugin>
+    <version.grails-maven-plugin>2.4.6</version.grails-maven-plugin>
+    <version.jspc-maven-plugin>2.0-alpha-3</version.jspc-maven-plugin>
+    <version.native-maven-plugin>1.0-alpha-11</version.native-maven-plugin>
+    <version.retrotranslator-maven-plugin>1.0-alpha-4</version.retrotranslator-maven-plugin>
+    <version.servicedoc-maven-plugin>1.0.0</version.servicedoc-maven-plugin>
+    <version.smc-maven-plugin>1.0-alpha-1</version.smc-maven-plugin>
+
+    <version.maven-antrun-plugin>3.0.0</version.maven-antrun-plugin>
+    <version.appassembler-maven-plugin>2.1.0</version.appassembler-maven-plugin>
+    <version.maven-archetype-plugin>3.2.0</version.maven-archetype-plugin>
+    <version.maven-artifact-plugin>3.1.0</version.maven-artifact-plugin>
+    <version.aspectj-maven-plugin>1.15.0</version.aspectj-maven-plugin>
+    <version.maven-assembly-plugin>3.7.1</version.maven-assembly-plugin>
+    <version.axistools-maven-plugin>1.4</version.axistools-maven-plugin>
+    <version.build-helper-maven-plugin>3.6.0</version.build-helper-maven-plugin>
+    <version.buildnumber-maven-plugin>1.4</version.buildnumber-maven-plugin>
+    <version.cassandra-maven-plugin>3.6</version.cassandra-maven-plugin>
+    <version.castor-maven-plugin>2.1</version.castor-maven-plugin>
+    <version.maven-changes-plugin>2.12.1</version.maven-changes-plugin>
+    <version.maven-changelog-plugin>2.3</version.maven-changelog-plugin>
+    <version.maven-checkstyle-plugin>3.5.0</version.maven-checkstyle-plugin>
+    <version.chronos-jmeter-maven-plugin>1.1.0</version.chronos-jmeter-maven-plugin>
+    <version.chronos-report-maven-plugin>1.1.0</version.chronos-report-maven-plugin>
+    <version.chronos-surefire-maven-plugin>1.1.0</version.chronos-surefire-maven-plugin>
+    <version.maven-clean-plugin>3.4.0</version.maven-clean-plugin>
+    <version.clirr-maven-plugin>2.8</version.clirr-maven-plugin>
+    <version.cobertura-maven-plugin>2.7</version.cobertura-maven-plugin>
+    <version.codenarc-maven-plugin>0.22-1</version.codenarc-maven-plugin>
+    <version.commons-attributes-maven-plugin>1.0</version.commons-attributes-maven-plugin>
+    <version.depgraph-maven-plugin>4.0.3</version.depgraph-maven-plugin>
+    <version.maven-compiler-plugin>3.13.0</version.maven-compiler-plugin>
+    <version.maven-compat>${version.maven-libs}</version.maven-compat>
+    <version.maven-core>${version.maven-libs}</version.maven-core>
+    <version.maven-dependency-plugin>3.8.0</version.maven-dependency-plugin>
+    <version.maven-deploy-plugin>3.1.3</version.maven-deploy-plugin>
+    <version.ditaot-maven-plugin>1.0</version.ditaot-maven-plugin>
+    <version.maven-doap-plugin>1.2</version.maven-doap-plugin>
+    <version.maven-docck-plugin>1.1</version.maven-docck-plugin>
+    <version.maven-ear-plugin>3.02.0</version.maven-ear-plugin>
+    <version.maven-ejb-plugin>3.02.0</version.maven-ejb-plugin>
     <version.maven-eclipse-plugin>2.9</version.maven-eclipse-plugin>
-    <version.maven-enforcer-plugin>1.3.1</version.maven-enforcer-plugin>
-    <version.maven-failsafe-plugin>2.18</version.maven-failsafe-plugin>
-    <version.maven-help-plugin>2.2</version.maven-help-plugin>
-    <version.maven-install-plugin>2.5.2</version.maven-install-plugin>
-    <version.maven-jar-plugin>2.5</version.maven-jar-plugin>
+    <version.maven-enforcer-plugin>3.5.0</version.maven-enforcer-plugin>
+    <version.exec-maven-plugin>3.0.0</version.exec-maven-plugin>
+    <version.maven-failsafe-plugin>3.5.0</version.maven-failsafe-plugin>
+    <version.minify-maven-plugin>1.7.6</version.minify-maven-plugin>
+    <version.findbugs-maven-plugin>3.0.5</version.findbugs-maven-plugin>
+    <version.fitnesse-maven-plugin>1.1-beta-1</version.fitnesse-maven-plugin>
+    <version.flatten-maven-plugin>1.2.7</version.flatten-maven-plugin>
+    <version.maven-gpg-plugin>3.0.1</version.maven-gpg-plugin>
+    <version.gwt-maven-plugin>2.9.0</version.gwt-maven-plugin>
+    <version.maven-help-plugin>3.5.0</version.maven-help-plugin>
+    <version.hibernate3-maven-plugin>3.0</version.hibernate3-maven-plugin>
+    <version.idlj-maven-plugin>1.2.2</version.idlj-maven-plugin>
+    <version.maven-install-plugin>3.1.3</version.maven-install-plugin>
+    <version.maven-invoker-plugin>3.2.2</version.maven-invoker-plugin>
+    <version.maven-jar-plugin>3.4.2</version.maven-jar-plugin>
     <version.maven-jardiff-plugin>1.0</version.maven-jardiff-plugin>
-    <version.maven-javadoc-plugin>2.9.1</version.maven-javadoc-plugin>
-    <version.maven-plugin-plugin>3.3</version.maven-plugin-plugin>
-    <version.maven-pmd-plugin>3.2</version.maven-pmd-plugin>
-    <version.maven-project-info-reports-plugin>2.7</version.maven-project-info-reports-plugin>
+    <version.maven-jarsigner-plugin>3.1.0</version.maven-jarsigner-plugin>
+    <version.javacc-maven-plugin>2.6</version.javacc-maven-plugin>
+    <version.maven-javadoc-plugin>3.10.0</version.maven-javadoc-plugin>
+    <version.javancss-maven-plugin>2.1</version.javancss-maven-plugin>
+    <version.jaxb2-maven-plugin>2.5.0</version.jaxb2-maven-plugin>
+    <version.jaxws-maven-plugin>2.6</version.jaxws-maven-plugin>
+    <version.jboss-packaging-maven-plugin>2.2</version.jboss-packaging-maven-plugin>
+    <version.jdepend-maven-plugin>2.0</version.jdepend-maven-plugin>
+    <version.maven-jdeps-plugin>3.1.2</version.maven-jdeps-plugin>
+    <version.maven-jdeprscan-plugin>3.0.0-alpha-1</version.maven-jdeprscan-plugin>
+    <version.maven-jlink-plugin>3.1.0</version.maven-jlink-plugin>
+    <version.maven-jmod-plugin>3.0.0-alpha-1</version.maven-jmod-plugin>
+    <version.jpox-maven-plugin>1.1.7</version.jpox-maven-plugin>
+    <version.js-import-maven-plugin>1.0.1</version.js-import-maven-plugin>
+    <version.jslint-maven-plugin>1.0.1</version.jslint-maven-plugin>
+    <version.maven-jspc-plugin>1.4.6</version.maven-jspc-plugin>
+    <version.maven-jxr-plugin>3.5.0</version.maven-jxr-plugin>
+    <version.keytool-maven-plugin>1.7</version.keytool-maven-plugin>
+    <version.latex>1.1</version.latex>
+    <version.maven-libs>3.2.5</version.maven-libs>
+    <version.license-maven-plugin>2.0</version.license-maven-plugin>
+    <version.maven-linkcheck-plugin>1.2</version.maven-linkcheck-plugin>
+    <version.mrm-maven-plugin>1.2.0</version.mrm-maven-plugin>
+    <version.ounce-maven-plugin>1.6.1</version.ounce-maven-plugin>
+    <version.maven-patch-plugin>1.2</version.maven-patch-plugin>
+    <version.maven-pdf-plugin>1.4</version.maven-pdf-plugin>
+    <version.maven-plugin-api>${version.maven-libs}</version.maven-plugin-api>
+    <version.maven-plugin-plugin>4.0.0-beta-1</version.maven-plugin-plugin>
+    <version.maven-plugin-testing-harness>3.3.0</version.maven-plugin-testing-harness>
+    <version.maven-plugin-annotations>3.4</version.maven-plugin-annotations>
+    <version.maven-pmd-plugin>3.25.0</version.maven-pmd-plugin>
+    <version.maven-project-info-reports-plugin>3.7.0</version.maven-project-info-reports-plugin>
+    <version.maven-rar-plugin>2.4</version.maven-rar-plugin>
     <version.maven-reactor-plugin>1.1</version.maven-reactor-plugin>
-    <version.maven-release-plugin>2.5.1</version.maven-release-plugin>
-    <version.maven-resources-plugin>2.7</version.maven-resources-plugin>
-    <version.maven-shade-plugin>2.3</version.maven-shade-plugin>
-    <version.maven-site-plugin>3.4</version.maven-site-plugin>
-    <version.maven-source-plugin>2.2.1</version.maven-source-plugin>
-    <version.maven-surefire-plugin>2.18</version.maven-surefire-plugin>
-    <version.maven-war-plugin>2.5</version.maven-war-plugin>
-
-    <version.jdiff-maven-plugin>1.0-beta-0</version.jdiff-maven-plugin>
-
+    <version.maven-release-plugin>3.1.1</version.maven-release-plugin>
+    <version.maven-remote-resources-plugin>1.7.0</version.maven-remote-resources-plugin>
+    <version.maven-resources-plugin>3.3.1</version.maven-resources-plugin>
+    <version.rmic-maven-plugin>1.3</version.rmic-maven-plugin>
+    <version.rpm-maven-plugin>2.2.0</version.rpm-maven-plugin>
+    <version.sablecc-maven-plugin>2.2</version.sablecc-maven-plugin>
+    <version.maven-scm-plugin>1.11.3</version.maven-scm-plugin>
+    <version.maven-scm-publish-plugin>1.11.3</version.maven-scm-publish-plugin>
+    <version.scmchangelog-maven-plugin>1.3</version.scmchangelog-maven-plugin>
+    <version.maven-scripting-plugin>3.0.0</version.maven-scripting-plugin>
+    <version.selenium-maven-plugin>2.3</version.selenium-maven-plugin>
+    <version.maven-shade-plugin>3.6.0</version.maven-shade-plugin>
+    <version.maven-site-plugin>4.0.0-M16</version.maven-site-plugin>
+    <version.siteskinner-maven-plugin>1.0</version.siteskinner-maven-plugin>
+    <version.sql-maven-plugin>3.0.0</version.sql-maven-plugin>
+    <version.sqlj-maven-plugin>1.3</version.sqlj-maven-plugin>
+    <version.maven-stage-plugin>1.0</version.maven-stage-plugin>
+    <version.maven-source-plugin>3.3.1</version.maven-source-plugin>
+    <version.maven-surefire-plugin>3.5.0</version.maven-surefire-plugin>
+    <version.spf4j-jdiff-maven-plugin>8.10.0</version.spf4j-jdiff-maven-plugin>
+    <version.taglist-maven-plugin>2.4</version.taglist-maven-plugin>
+    <version.templating-maven-plugin>1.0.0</version.templating-maven-plugin>
+    <version.tidy-maven-plugin>1.1.0</version.tidy-maven-plugin>
+    <version.truezip-maven-plugin>1.2</version.truezip-maven-plugin>
+    <version.maven-toolchains-plugin>3.0.0</version.maven-toolchains-plugin>
+    <version.maven-verifier-plugin>1.1</version.maven-verifier-plugin>
+    <version.vfs-maven-plugin>1.0.1</version.vfs-maven-plugin>
+    <version.maven-war-plugin>3.4.0</version.maven-war-plugin>
+    <version.wagon-maven-plugin>1.0.2</version.wagon-maven-plugin>
+    <version.wagon-ssh>3.5.3</version.wagon-ssh>
+    <version.was6-maven-plugin>1.2.1</version.was6-maven-plugin>
+    <version.weblogic-maven-plugin>2.9.5</version.weblogic-maven-plugin>
+    <version.webtest-maven-plugin>1.0.0</version.webtest-maven-plugin>
+    <version.maven-wrapper-plugin>3.0.2</version.maven-wrapper-plugin>
+    <version.xdoclet-maven-plugin>1.0</version.xdoclet-maven-plugin>
+    <version.xmlbeans-maven-plugin>2.3.3</version.xmlbeans-maven-plugin>
+    <version.xml-maven-plugin>1.0.2</version.xml-maven-plugin>
     <version.mockito>1.9.5</version.mockito>
-    <version.powermock>1.5.5</version.powermock>
+
+    <version.netty>5.0.0.Alpha1</version.netty>
+
+    <version.oracle-driver>12.2.0.1</version.oracle-driver>
+
+    <version.powermock>1.6.1</version.powermock>
+
     <version.selenium>2.41.0</version.selenium>
     <version.slf4j>1.7.7</version.slf4j>
-    <version.versions-maven-plugin>2.1</version.versions-maven-plugin>
+    <version.spock>1.3-groovy-2.5</version.spock>
+    <version.springboot>2.2.0.RELEASE</version.springboot>
 
-    <version.aspectj-maven-plugin>1.7</version.aspectj-maven-plugin>
-    <version.aspectjrt>1.8.2</version.aspectjrt>
-    <version.aspectjtools>1.8.2.1-SNAPSHOT</version.aspectjtools>
+    <version.versions-maven-plugin>2.17.1</version.versions-maven-plugin>
 
   </properties>
 
@@ -235,12 +353,12 @@
     <repository>
       <id>acmsl-libs-releases</id>
       <name>acmsl-libs-releases</name>
-      <url>http://maven.acm-sl.org/repository/libs-releases-local</url>
+      <url>http://maven.acm-sl.org/artifactory/libs-releases-local</url>
     </repository>
     <snapshotRepository>
       <id>acmsl-libs-snapshots</id>
       <name>acmsl-libs-snapshots</name>
-      <url>http://maven.acm-sl.org/repository/libs-snapshots-local</url>
+      <url>http://maven.acm-sl.org/artifactory/libs-snapshots-local</url>
     </snapshotRepository>
   </distributionManagement>
 
@@ -357,6 +475,11 @@
         <version>${version.maven-plugin-annotations}</version>
       </dependency>
       <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-dbcp2</artifactId>
+        <version>${version.commons-dbcp}</version>
+      </dependency>
+      <dependency>
         <groupId>commons-logging</groupId>
         <artifactId>commons-logging</artifactId>
         <version>${version.commons-logging}</version>
@@ -364,7 +487,17 @@
       <dependency>
         <groupId>com.oracle</groupId>
         <artifactId>ojdbc14</artifactId>
-        <version>${oracle-driver.version}</version>
+        <version>${version.oracle-driver}</version>
+      </dependency>
+      <dependency>
+        <groupId>jakarta.resource</groupId>
+        <artifactId>jakarta.resource-api</artifactId>
+        <version>${version.jca}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-pool2</artifactId>
+        <version>${version.commons-pool}</version>
       </dependency>
       <dependency>
         <groupId>org.antlr</groupId>
@@ -396,6 +529,11 @@
         <groupId>org.antlr</groupId>
         <artifactId>antlr</artifactId>
         <version>3.5.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents.client5</groupId>
+        <artifactId>httpclient5</artifactId>
+        <version>${version.httpclient}</version>
       </dependency>
       <dependency>
         <groupId>commons-digester</groupId>
@@ -592,6 +730,21 @@
         <artifactId>lombok</artifactId>
         <version>${version.lombok}</version>
       </dependency>
+      <dependency>
+        <groupId>org.spockframework</groupId>
+        <artifactId>spock-core</artifactId>
+        <version>${version.spock}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.spockframework</groupId>
+        <artifactId>spock-spring</artifactId>
+        <version>${version.spock}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <version>${version.springboot}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -626,7 +779,7 @@
             <dependency>
               <groupId>org.apache.maven.wagon</groupId>
               <artifactId>wagon-ssh</artifactId>
-              <version>1.0-beta-7</version>
+              <version>${version.wagon-ssh}</version>
             </dependency>
           </dependencies>
           <!--executions>
@@ -702,33 +855,15 @@
             </execution>
           </executions>
         </plugin>
-        <plugin>
-          <groupId>org.jasig.mojo.jspc</groupId>
-          <artifactId>jspc-maven-plugin</artifactId>
-          <executions>
-            <execution>
-              <goals>
-                <goal>compile</goal>
-              </goals>
-            </execution>
-          </executions>
-          <dependencies>
-            <dependency>
-              <groupId>org.jasig.mojo.jspc</groupId>
-              <artifactId>jspc-compiler-tomcat7</artifactId>
-              <version>2.0.0</version>
-            </dependency>
-          </dependencies>
-        </plugin>
 
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>sql-maven-plugin</artifactId>
-          <version>1.5</version>
+          <version>${version.sql-maven-plugin}</version>
           <dependencies>
             <dependency>
-              <groupId>oracle-driver</groupId>
-              <artifactId>oracle-driver</artifactId>
+              <groupId>com.oracle.jdbc</groupId>
+              <artifactId>ojdbc8</artifactId>
               <version>${version.oracle-driver}</version>
             </dependency>
           </dependencies>
@@ -764,12 +899,12 @@
           </configuration>
           <dependencies>
             <dependency>
-              <groupId>com.google.code.findbugs</groupId>
-              <artifactId>findbugs</artifactId>
-              <version>${version.findbugs}</version>
+              <groupId>com.github.spotbugs</groupId>
+              <artifactId>spotbugs</artifactId>
+              <version>${version.spotbugs}</version>
             </dependency>
             <dependency>
-              <groupId>asm</groupId>
+              <groupId>org.ow2.asm</groupId>
               <artifactId>asm</artifactId>
               <version>${version.asm}</version>
             </dependency>
@@ -893,12 +1028,12 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>keytool-maven-plugin</artifactId>
-          <version>1.0</version>
+          <version>${version.keytool-maven-plugin}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jarsigner-plugin</artifactId>
-          <version>1.2</version>
+          <version>${version.maven-jarsigner-plugin}</version>
         </plugin>
         <plugin>
           <groupId>org.dstovall</groupId>
@@ -926,7 +1061,7 @@
         <plugin>
           <groupId>org.grails</groupId>
           <artifactId>grails-maven-plugin</artifactId>
-          <version>1.3.7</version>
+          <version>${version.grails-maven-plugin}</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
@@ -1237,13 +1372,13 @@
         <plugin>
           <groupId>com.github.ferstl</groupId>
           <artifactId>depgraph-maven-plugin</artifactId>
-          <version>1.0.1</version>
+          <version>${version.depgraph-maven-plugin}</version>
         </plugin>
 
         <plugin>
           <groupId>com.samaxes.maven</groupId>
           <artifactId>minify-maven-plugin</artifactId>
-          <version>1.7</version>
+          <version>${version.minify-maven-plugin}</version>
           <executions>
             <execution>
               <id>default-minify</id>
@@ -1293,18 +1428,18 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>jaxws-maven-plugin</artifactId>
-          <version>1.12</version>
+          <version>${version.jaxws-maven-plugin}</version>
         </plugin>
 
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>dbunit-maven-plugin</artifactId>
-          <version>1.0-beta-3</version>
+          <version>${version.dbunit-maven-plugin}</version>
 
           <!--jar file that has the jdbc driver -->
           <dependencies>
             <dependency>
-              <groupId>oracle-driver</groupId>
+              <groupId>com.oracle.oracle-driver</groupId>
               <artifactId>oracle-driver</artifactId>
               <version>${version.oracle-driver}</version>
             </dependency>
@@ -1509,7 +1644,7 @@
         <plugin>
           <groupId>org.projectlombok</groupId>
           <artifactId>lombok-maven-plugin</artifactId>
-          <version>${version.lombok}</version>
+          <version>${version.lombok-maven-plugin}</version>
           <executions>
             <execution>
               <phase>generate-sources</phase>
@@ -1630,9 +1765,9 @@
 
       <!-- We haven't implemented how to retrieve the previous version yet -->
       <!--plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>jdiff-maven-plugin</artifactId>
-        <version>${version.jdiff-maven-plugin}</version>
+        <groupId>org.spf4j</groupId>
+        <artifactId>spf4j-jdiff-maven-plugin</artifactId>
+        <version>${version.spf4j-jdiff-maven-plugin}</version>
         <configuration>
           <comparisonVersion>${new-version}</comparisonVersion>
           <baseVersion>${previous-version}</baseVersion>
@@ -1655,7 +1790,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jxr-plugin</artifactId>
-        <version>2.5</version>
+        <version>${version.maven-jxr-plugin}</version>
         <configuration>
           <linkJavadoc>true</linkJavadoc>
         </configuration>
