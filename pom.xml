@@ -36,10 +36,9 @@
     <version.javacss>latest-SNAPSHOT</version.javacss>
     <version.k8s-nix>latest-SNAPSHOT</version.k8s-nix>
 
-    <version.checkthread>1.0.9</version.checkthread>
     <version.lombok>1.16.12</version.lombok>
-    <version.powermock>1.6.1</version.powermock>
     <version.oracle-driver>12.1.0.1</version.oracle-driver>
+    <version.powermock>2.0.9</version.powermock>
     <version.netty>5.0.0.Alpha1</version.netty>
     <version.maven-libs>3.2.5</version.maven-libs>
     <version.maven-core>${version.maven-libs}</version.maven-core>
@@ -49,7 +48,7 @@
     <version.maven-patch-plugin>1.1.1</version.maven-patch-plugin>
     <version.junit>4.13.1</version.junit>
     <version.cucumber-libs>1.2.2</version.cucumber-libs>
-    <version.cucumber-core>${version.cucumber-libs}</version.cucumber-core>
+    <version.cucumber-core>7.18.1</version.cucumber-core>
     <version.cucumber-java>${version.cucumber-libs}</version.cucumber-java>
     <version.cucumber-junit>${version.cucumber-libs}</version.cucumber-junit>
     <version.commons-logging>1.2</version.commons-logging>
@@ -60,8 +59,8 @@
 
     <version.maven>3.2.1</version.maven>
 
-    <javac.source>1.8</javac.source>
-    <javac.target>1.8</javac.target>
+    <javac.source>17</javac.source>
+    <javac.target>17</javac.target>
 
     <!-- define encoding for files (see:
          http://docs.codehaus.org/display/MAVENUSER/POM+Element+for+Source+File+Encoding)
@@ -74,12 +73,14 @@
 
     <!-- third-party versions -->
 
+    <version.animal-sniffer-maven-plugin>1.24</version.animal-sniffer-maven-plugin>
     <version.antlr4>4.3</version.antlr4>
+    <version.antlr4-annotations>4.3</version.antlr4-annotations>
     <version.asm>9.7</version.asm>
     <version.aspectjrt>1.9.22.1</version.aspectjrt>
     <version.aspectjtools>1.9.22.1</version.aspectjtools>
 
-    <version.checkthread>1.0.9</version.checkthread>
+    <version.checkthread>1.0.10-SNAPSHOT</version.checkthread>
     <version.commons-dbcp>2.12.0</version.commons-dbcp>
     <version.commons-logging>1.3.4</version.commons-logging>
     <version.commons-pool>2.12.0</version.commons-pool>
@@ -98,6 +99,9 @@
     <version.httpcore>4.3.2</version.httpcore>
 
     <version.jca>2.1.0</version.jca>
+    <version.jaxb>2.3.0</version.jaxb>
+    <version.jakarta-xml-bind-api>4.0.2</version.jakarta-xml-bind-api>
+    <version.jaxb-impl>4.0.2</version.jaxb-impl>
     <version.jersey>3.1.8</version.jersey>
     <version.jetty>8.1.16.v20140903</version.jetty>
     <version.jetty9>9.2.2.v20140723</version.jetty9>
@@ -122,6 +126,7 @@
     <version.enchanter-maven-plugin>1.0-beta-1</version.enchanter-maven-plugin>
     <version.grails-maven-plugin>2.4.6</version.grails-maven-plugin>
     <version.jspc-maven-plugin>2.0-alpha-3</version.jspc-maven-plugin>
+    <version.mockito>5.13.0</version.mockito>
     <version.native-maven-plugin>1.0-alpha-11</version.native-maven-plugin>
     <version.retrotranslator-maven-plugin>1.0-alpha-4</version.retrotranslator-maven-plugin>
     <version.servicedoc-maven-plugin>1.0.0</version.servicedoc-maven-plugin>
@@ -254,8 +259,6 @@
 
     <version.oracle-driver>12.2.0.1</version.oracle-driver>
 
-    <version.powermock>1.6.1</version.powermock>
-
     <version.selenium>2.41.0</version.selenium>
     <version.slf4j>1.7.7</version.slf4j>
     <version.spock>1.3-groovy-2.5</version.spock>
@@ -332,14 +335,14 @@
     <pluginRepository>
       <id>acmsl-plugins-releases</id>
       <name>acmsl-plugins-releases</name>
-      <url>http://maven.acm-sl.org/repository/plugins-releases-local</url>
+      <url>https://maven.acm-sl.org/repository/plugins-releases-local</url>
       <releases><enabled>true</enabled></releases>
       <snapshots><enabled>false</enabled></snapshots>
     </pluginRepository>
     <pluginRepository>
       <id>acmsl-plugins-snapshots</id>
       <name>acmsl-plugins-snapshots</name>
-      <url>http://maven.acm-sl.org/repository/plugins-snapshots-local</url>
+      <url>https://maven.acm-sl.org/repository/plugins-snapshots-local</url>
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </pluginRepository>
@@ -353,12 +356,12 @@
     <repository>
       <id>acmsl-libs-releases</id>
       <name>acmsl-libs-releases</name>
-      <url>http://maven.acm-sl.org/artifactory/libs-releases-local</url>
+      <url>https://maven.acm-sl.org/artifactory/libs-releases-local</url>
     </repository>
     <snapshotRepository>
       <id>acmsl-libs-snapshots</id>
       <name>acmsl-libs-snapshots</name>
-      <url>http://maven.acm-sl.org/artifactory/libs-snapshots-local</url>
+      <url>https://maven.acm-sl.org/artifactory/libs-snapshots-local</url>
     </snapshotRepository>
   </distributionManagement>
 
@@ -444,11 +447,6 @@
         <artifactId>javacss</artifactId>
         <version>${version.javacss}</version>
       </dependency>
-      <dependency>
-        <groupId>org.checkthread</groupId>
-        <artifactId>checkthread-annotations</artifactId>
-        <version>${version.checkthread}</version>
-      </dependency>
        <dependency>
         <groupId>log4j</groupId>
         <artifactId>log4j</artifactId>
@@ -480,6 +478,16 @@
         <version>${version.commons-dbcp}</version>
       </dependency>
       <dependency>
+        <groupId>org.checkthread</groupId>
+        <artifactId>checkthread-annotations</artifactId>
+        <version>${version.checkthread}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.checkthread</groupId>
+        <artifactId>checkthread-analyzer</artifactId>
+        <version>${version.checkthread}</version>
+      </dependency>
+      <dependency>
         <groupId>commons-logging</groupId>
         <artifactId>commons-logging</artifactId>
         <version>${version.commons-logging}</version>
@@ -502,7 +510,7 @@
       <dependency>
         <groupId>org.antlr</groupId>
         <artifactId>antlr4</artifactId>
-        <version>${antlr4.version}</version>
+        <version>${version.antlr4}</version>
         <exclusions>
           <exclusion>
             <groupId>org.antlr</groupId>
@@ -513,12 +521,12 @@
       <dependency>
         <groupId>org.antlr</groupId>
         <artifactId>antlr4-runtime</artifactId>
-        <version>${antlr4.version}</version>
+        <version>${version.antlr4}</version>
       </dependency>
       <dependency>
         <groupId>org.antlr</groupId>
         <artifactId>antlr4-annotations</artifactId>
-        <version>${antlr4.version}</version>
+        <version>${version.antlr4-annotations}</version>
       </dependency>
       <dependency>
         <groupId>org.antlr</groupId>
@@ -616,7 +624,7 @@
         <version>2.12.2</version>
       </dependency>
       <dependency>
-        <groupId>info.cukes</groupId>
+        <groupId>io.cucumber</groupId>
         <artifactId>cucumber-core</artifactId>
         <version>${version.cucumber-core}</version>
       </dependency>
@@ -656,6 +664,11 @@
         <version>0.0.23</version>
       </dependency>
       <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+        <version>${version.mockito}</version>
+      </dependency>
+      <dependency>
         <groupId>commons-configuration</groupId>
         <artifactId>commons-configuration</artifactId>
         <version>1.10</version>
@@ -663,19 +676,19 @@
       <dependency>
         <groupId>org.powermock</groupId>
         <artifactId>powermock-module-junit4</artifactId>
-        <version>${powermock.version}</version>
+        <version>${version.powermock}</version>
         <optional>true</optional>
       </dependency>
       <dependency>
         <groupId>org.powermock</groupId>
         <artifactId>powermock-core</artifactId>
-        <version>${powermock.version}</version>
+        <version>${version.powermock}</version>
         <optional>true</optional>
       </dependency>
       <dependency>
         <groupId>org.powermock</groupId>
         <artifactId>powermock-api-easymock</artifactId>
-        <version>${powermock.version}</version>
+        <version>${version.powermock}</version>
         <optional>true</optional>
       </dependency>
       <dependency>
@@ -698,12 +711,12 @@
       <dependency>
         <groupId>io.netty</groupId>
         <artifactId>netty-transport</artifactId>
-        <version>${netty.version}</version>
+        <version>${version.netty}</version>
       </dependency>
       <dependency>
         <groupId>io.netty</groupId>
         <artifactId>netty-buffer</artifactId>
-        <version>${netty.version}</version>
+        <version>${version.netty}</version>
       </dependency>
       <dependency>
         <groupId>mx4j</groupId>
@@ -744,6 +757,21 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-test</artifactId>
         <version>${version.springboot}</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.xml.bind</groupId>
+        <artifactId>jaxb-api</artifactId>
+        <version>${version.jaxb}</version>
+      </dependency>
+      <dependency>
+        <groupId>jakarta.xml.bind</groupId>
+        <artifactId>jakarta.xml.bind-api</artifactId>
+        <version>${version.jakarta-xml-bind-api}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.sun.xml.bind</groupId>
+        <artifactId>jaxb-impl</artifactId>
+        <version>${version.jaxb-impl}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -856,6 +884,18 @@
           </executions>
         </plugin>
 
+        <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>animal-sniffer-maven-plugin</artifactId>
+        <version>${version.animal-sniffer-maven-plugin}</version>
+        <configuration>
+          <signature>
+            <groupId>org.codehaus.mojo.signature</groupId>
+            <artifactId>java15</artifactId>
+            <version>1.0</version>
+          </signature>
+        </configuration>
+      </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>sql-maven-plugin</artifactId>
@@ -1013,7 +1053,7 @@
             <encoding>${javac.encoding}</encoding>
             <source>${javac.source}</source>
             <target>${javac.target}</target>
-            <warn>constructorName,packageDefaultMethod,deprecation,maskedCatchBlocks,unusedLocals,unusedArguments,unusedImports,all</warn>               <!--proceedOnError>true</proceedOnError-->
+          <warn>constructorName,packageDefaultMethod,deprecation,maskedCatchBlocks,unusedLocals,unusedArguments,unusedImports,all</warn>               <!--proceedOnError>true</proceedOnError-->
           </configuration>
           <executions>
             <execution>
@@ -1094,14 +1134,25 @@
             </dependency>
           </dependencies>
           <configuration>
-            <argLine>-Xms512m -Xmx1024m -XX:MaxPermSize=512m -Duser.country=en -Duser.language=en -Dqueryjroot=${queryjroot}</argLine>
-            <maxmem>1024</maxmem>
-  	    <forkCount>1</forkCount>
+            <!--argLine>-Xms512m -Xmx1024m -XX:MaxPermSize=512m </argLine-->
+            <argLine>
+              -Duser.country=en -Duser.language=en
+              --add-opens java.base/java.io=ALL-UNNAMED
+              --add-opens java.base/java.lang=ALL-UNNAMED
+              --add-opens java.base/java.nio.charset=ALL-UNNAMED
+              --add-opens java.base/java.time=ALL-UNNAMED
+              --add-opens java.base/java.time.format=ALL-UNNAMED
+              --add-opens java.base/java.util=ALL-UNNAMED
+              --add-opens java.base/sun.nio.cs=ALL-UNNAMED
+              --add-opens java.xml/jdk.xml.internal=ALL-UNNAMED
+              --add-opens java.xml/org.xml.sax=ALL-UNNAMED
+            </argLine>
+  	        <forkCount>1</forkCount>
             <reuseForks>true</reuseForks>
             <excludedGroups>org.junit.Test</excludedGroups>
             <useFile>false</useFile>
             <!--parallel>classes</parallel>
-                <threadCount>2</threadCount-->
+            <threadCount>2</threadCount-->
           </configuration>
         </plugin>
         <plugin>
@@ -1568,7 +1619,7 @@
             <dependency>
               <groupId>com.oracle</groupId>
               <artifactId>ojdbc14</artifactId>
-              <version>${oracle-driver.version}</version>
+              <version>${version.oracle-driver}</version>
             </dependency>
           </dependencies>
         </plugin>
@@ -1576,7 +1627,7 @@
         <plugin>
           <groupId>org.antlr</groupId>
           <artifactId>antlr4-maven-plugin</artifactId>
-          <version>${antlr4.version}</version>
+          <version>${version.antlr4}</version>
           <executions>
             <execution>
               <phase>generate-sources</phase>
@@ -1585,37 +1636,6 @@
               </goals>
             </execution>
           </executions>
-        </plugin>
-
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-antrun-plugin</artifactId>
-          <executions>
-            <execution>
-              <phase>test</phase>
-              <configuration>
-                <tasks>
-                  <taskdef name="checkthread" classname="org.checkthread.anttask.CheckThreadTask" /> 
-                  <checkthread 
-                      targetpath="${project.build.outputDirectory}/" 
-                      classpath="${project.build.outputDirectory}/" 
-                      verbose="true"/> 
-                </tasks>
-                <sourceRoot>${basedir}/src/main/java</sourceRoot>
-              </configuration>
-              <goals>
-                <goal>run</goal>
-              </goals>
-            </execution>
-          </executions>
-          <dependencies>
-            <dependency>
-              <groupId>org.checkthread</groupId>
-              <artifactId>checkthread-analyzer</artifactId>
-              <version>${checkthread.version}</version>
-              <scope>compile</scope>
-            </dependency>
-          </dependencies>
         </plugin>
 
         <plugin>
