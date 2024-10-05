@@ -1075,24 +1075,6 @@
           <version>${version.maven-jarsigner-plugin}</version>
         </plugin>
         <plugin>
-          <groupId>org.dstovall</groupId>
-          <artifactId>onejar-maven-plugin</artifactId>
-          <version>1.4.5</version>
-          <executions>
-            <execution>
-              <id>default-execution</id>
-              <phase>package</phase>
-              <configuration>
-                <!-- Optional -->
-                <onejarVersion>0.97</onejarVersion>
-              </configuration>
-              <goals>
-                <goal>one-jar</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-        <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>${version.maven-project-info-reports-plugin}</version>
