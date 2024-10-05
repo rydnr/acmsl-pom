@@ -93,7 +93,6 @@
     
     <version.spotbugs>4.8.6</version.spotbugs>
     <version.spotbugs-annotations>${version.spotbugs}</version.spotbugs-annotations>
-    <version.findbugs-maven-plugin>3.0.5</version.findbugs-maven-plugin>
 
     <version.httpclient>5.3.1</version.httpclient>
     <version.httpcore>4.3.2</version.httpcore>
@@ -301,28 +300,28 @@
     <repository>
       <id>acmsl-libs-releases</id>
       <name>acmsl-libs-releases</name>
-      <url>http://maven.acm-sl.org/repository/libs-releases-local</url>
+      <url>http://maven.acm-sl.org:8081/repository/maven-libs-releases-local</url>
       <releases><enabled>true</enabled></releases>
       <snapshots><enabled>false</enabled></snapshots>
     </repository>
     <repository>
       <id>acmsl-ext-releases</id>
       <name>acmsl-ext-releases</name>
-      <url>http://maven.acm-sl.org/repository/ext-releases-local</url>
+      <url>http://maven.acm-sl.org:8081/repository/maven-ext-releases-local</url>
       <releases><enabled>true</enabled></releases>
       <snapshots><enabled>false</enabled></snapshots>
     </repository>
     <repository>
       <id>acmsl-libs-snapshots</id>
       <name>acmsl-libs-snapshots</name>
-      <url>http://maven.acm-sl.org/repository/libs-snapshots-local</url>
+      <url>http://maven.acm-sl.org:8081/repository/ext-libs-snapshots-local</url>
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </repository>
     <repository>
       <id>acmsl-ext-snapshots</id>
       <name>acmsl-ext-snapshots</name>
-      <url>http://maven.acm-sl.org/repository/ext-snapshots-local</url>
+      <url>http://maven.acm-sl.org:8081/repository/ext-snapshots-local</url>
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </repository>
@@ -335,14 +334,14 @@
     <pluginRepository>
       <id>acmsl-plugins-releases</id>
       <name>acmsl-plugins-releases</name>
-      <url>https://maven.acm-sl.org/repository/plugins-releases-local</url>
+      <url>http://maven.acm-sl.org:8081/repository/maven-plugins-releases-local</url>
       <releases><enabled>true</enabled></releases>
       <snapshots><enabled>false</enabled></snapshots>
     </pluginRepository>
     <pluginRepository>
       <id>acmsl-plugins-snapshots</id>
       <name>acmsl-plugins-snapshots</name>
-      <url>https://maven.acm-sl.org/repository/plugins-snapshots-local</url>
+      <url>http://maven.acm-sl.org:8081/repository/maven-plugins-snapshots-local</url>
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </pluginRepository>
@@ -356,12 +355,12 @@
     <repository>
       <id>acmsl-libs-releases</id>
       <name>acmsl-libs-releases</name>
-      <url>https://maven.acm-sl.org/artifactory/libs-releases-local</url>
+      <url>http://maven.acm-sl.org:8081/repository/maven-libs-releases-local</url>
     </repository>
     <snapshotRepository>
       <id>acmsl-libs-snapshots</id>
       <name>acmsl-libs-snapshots</name>
-      <url>https://maven.acm-sl.org/artifactory/libs-snapshots-local</url>
+      <url>http://maven.acm-sl.org:8081/repository/maven-libs-snapshots-local</url>
     </snapshotRepository>
   </distributionManagement>
 
