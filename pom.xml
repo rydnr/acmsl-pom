@@ -25,7 +25,7 @@
   <properties>
 
     <version.major>3</version.major>
-    <version.minor>2</version.minor>
+    <version.minor>3</version.minor>
 
     <!-- Versions of the children -->
     <version.queryj>latest-SNAPSHOT</version.queryj>
