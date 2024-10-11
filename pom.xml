@@ -314,14 +314,14 @@
     <repository>
       <id>acmsl-libs-snapshots</id>
       <name>acmsl-libs-snapshots</name>
-      <url>http://maven.acm-sl.org:8081/repository/ext-libs-snapshots-local</url>
+      <url>http://maven.acm-sl.org:8081/repository/maven-libs-snapshots-local</url>
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </repository>
     <repository>
       <id>acmsl-ext-snapshots</id>
       <name>acmsl-ext-snapshots</name>
-      <url>http://maven.acm-sl.org:8081/repository/ext-snapshots-local</url>
+      <url>http://maven.acm-sl.org:8081/repository/maven-ext-snapshots-local</url>
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </repository>
