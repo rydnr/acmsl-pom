@@ -28,16 +28,19 @@
     <version.minor>3</version.minor>
 
     <!-- Versions of the children -->
-    <version.queryj>latest-SNAPSHOT</version.queryj>
-    <version.queryj-sql>latest-SNAPSHOT</version.queryj-sql>
     <version.java-commons>latest-SNAPSHOT</version.java-commons>
+    <version.queryj-sql>latest-SNAPSHOT</version.queryj-sql>
+    <version.queryj>latest-SNAPSHOT</version.queryj>
+    <version.queryj-templates-sql-java-spring>latest-SNAPSHOT</version.queryj-templates-sql-java-spring>
     <version.ST4-rydnr>latest-SNAPSHOT</version.ST4-rydnr>
     <version.devdel>latest-SNAPSHOT</version.devdel>
     <version.javacss>latest-SNAPSHOT</version.javacss>
     <version.k8s-nix>latest-SNAPSHOT</version.k8s-nix>
 
+    <version.mariadb-java-client>3.4.1</version.mariadb-java-client>
+    <version.spring-jdbc>6.1.14</version.spring-jdbc>
     <version.lombok>1.16.12</version.lombok>
-    <version.oracle-driver>12.1.0.1</version.oracle-driver>
+    <version.oracle-driver>23.5.0.24.07</version.oracle-driver>
     <version.powermock>2.0.9</version.powermock>
     <version.netty>5.0.0.Alpha1</version.netty>
     <version.maven-libs>3.2.5</version.maven-libs>
@@ -256,8 +259,6 @@
 
     <version.netty>5.0.0.Alpha1</version.netty>
 
-    <version.oracle-driver>12.2.0.1</version.oracle-driver>
-
     <version.selenium>2.41.0</version.selenium>
     <version.slf4j>1.7.7</version.slf4j>
     <version.spock>1.3-groovy-2.5</version.spock>
@@ -300,28 +301,28 @@
     <repository>
       <id>acmsl-libs-releases</id>
       <name>acmsl-libs-releases</name>
-      <url>http://maven.acm-sl.org:8081/repository/maven-libs-releases-local</url>
+      <url>http://maven.acm-sl.org/repository/maven-libs-releases-local</url>
       <releases><enabled>true</enabled></releases>
       <snapshots><enabled>false</enabled></snapshots>
     </repository>
     <repository>
       <id>acmsl-ext-releases</id>
       <name>acmsl-ext-releases</name>
-      <url>http://maven.acm-sl.org:8081/repository/maven-ext-releases-local</url>
+      <url>http://maven.acm-sl.org/repository/maven-ext-releases-local</url>
       <releases><enabled>true</enabled></releases>
       <snapshots><enabled>false</enabled></snapshots>
     </repository>
     <repository>
       <id>acmsl-libs-snapshots</id>
       <name>acmsl-libs-snapshots</name>
-      <url>http://maven.acm-sl.org:8081/repository/maven-libs-snapshots-local</url>
+      <url>http://maven.acm-sl.org/repository/maven-libs-snapshots-local</url>
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </repository>
     <repository>
       <id>acmsl-ext-snapshots</id>
       <name>acmsl-ext-snapshots</name>
-      <url>http://maven.acm-sl.org:8081/repository/maven-ext-snapshots-local</url>
+      <url>http://maven.acm-sl.org/repository/maven-ext-snapshots-local</url>
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </repository>
@@ -334,14 +335,14 @@
     <pluginRepository>
       <id>acmsl-plugins-releases</id>
       <name>acmsl-plugins-releases</name>
-      <url>http://maven.acm-sl.org:8081/repository/maven-plugins-releases-local</url>
+      <url>http://maven.acm-sl.org/repository/maven-plugins-releases-local</url>
       <releases><enabled>true</enabled></releases>
       <snapshots><enabled>false</enabled></snapshots>
     </pluginRepository>
     <pluginRepository>
       <id>acmsl-plugins-snapshots</id>
       <name>acmsl-plugins-snapshots</name>
-      <url>http://maven.acm-sl.org:8081/repository/maven-plugins-snapshots-local</url>
+      <url>http://maven.acm-sl.org/repository/maven-plugins-snapshots-local</url>
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </pluginRepository>
@@ -355,17 +356,22 @@
     <repository>
       <id>acmsl-libs-releases</id>
       <name>acmsl-libs-releases</name>
-      <url>http://maven.acm-sl.org:8081/repository/maven-libs-releases-local</url>
+      <url>http://maven.acm-sl.org/repository/maven-libs-releases-local</url>
     </repository>
     <snapshotRepository>
       <id>acmsl-libs-snapshots</id>
       <name>acmsl-libs-snapshots</name>
-      <url>http://maven.acm-sl.org:8081/repository/maven-libs-snapshots-local</url>
+      <url>http://maven.acm-sl.org/repository/maven-libs-snapshots-local</url>
     </snapshotRepository>
   </distributionManagement>
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.acmsl</groupId>
+        <artifactId>java-commons</artifactId>
+        <version>${version.java-commons}</version>
+      </dependency>
       <dependency>
         <groupId>org.acmsl.queryj</groupId>
         <artifactId>queryj-core</artifactId>
@@ -427,9 +433,9 @@
         <version>${version.queryj-sql}</version>
       </dependency>
       <dependency>
-        <groupId>org.acmsl</groupId>
-        <artifactId>java-commons</artifactId>
-        <version>${version.java-commons}</version>
+        <groupId>org.acmsl.queryj.templates</groupId>
+        <artifactId>sql-java-spring</artifactId>
+        <version>${version.queryj-templates-sql-java-spring}</version>
       </dependency>
       <dependency>
         <groupId>org.acmsl</groupId>
@@ -492,8 +498,8 @@
         <version>${version.commons-logging}</version>
       </dependency>
       <dependency>
-        <groupId>com.oracle</groupId>
-        <artifactId>ojdbc14</artifactId>
+        <groupId>com.oracle.database.jdbc</groupId>
+        <artifactId>ojdbc11</artifactId>
         <version>${version.oracle-driver}</version>
       </dependency>
       <dependency>
@@ -590,7 +596,12 @@
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-jdbc</artifactId>
-        <version>4.1.4.RELEASE</version>
+        <version>${version.spring-jdbc}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mariadb.jdbc</groupId>
+        <artifactId>mariadb-java-client</artifactId>
+        <version>${version.mariadb-java-client}</version>
       </dependency>
       <dependency>
         <groupId>oro</groupId>
@@ -901,8 +912,8 @@
           <version>${version.sql-maven-plugin}</version>
           <dependencies>
             <dependency>
-              <groupId>com.oracle.jdbc</groupId>
-              <artifactId>ojdbc8</artifactId>
+              <groupId>com.oracle.database.jdbc</groupId>
+              <artifactId>ojdbc11</artifactId>
               <version>${version.oracle-driver}</version>
             </dependency>
           </dependencies>
@@ -1471,8 +1482,8 @@
           <!--jar file that has the jdbc driver -->
           <dependencies>
             <dependency>
-              <groupId>com.oracle.oracle-driver</groupId>
-              <artifactId>oracle-driver</artifactId>
+              <groupId>com.oracle.database.jdbc</groupId>
+              <artifactId>ojdbc11</artifactId>
               <version>${version.oracle-driver}</version>
             </dependency>
           </dependencies>
@@ -1594,15 +1605,14 @@
 
         <plugin>
           <groupId>org.acmsl.queryj</groupId>
+          <artifactId>queryj-maven-plugin</artifactId>
+          <version>${version.queryj}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.acmsl.queryj</groupId>
           <artifactId>queryj-template-packaging-maven-plugin</artifactId>
           <version>${version.queryj}</version>
-          <dependencies>
-            <dependency>
-              <groupId>com.oracle</groupId>
-              <artifactId>ojdbc14</artifactId>
-              <version>${version.oracle-driver}</version>
-            </dependency>
-          </dependencies>
         </plugin>
 
         <plugin>
