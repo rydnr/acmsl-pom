@@ -6,7 +6,7 @@
   <groupId>org.acmsl</groupId>
   <artifactId>acmsl-pom</artifactId>
   <packaging>pom</packaging>
-  <version>latest-SNAPSHOT</version>
+  <version>3.3.0028</version>
   <name>ACM S.L. POM</name>
   <url>http://www.acm-sl.org/projects/acmsl-pom</url>
   <inceptionYear>2014</inceptionYear>
@@ -28,7 +28,7 @@
     <version.minor>3</version.minor>
 
     <!-- Versions of the children -->
-    <version.java-commons>latest-SNAPSHOT</version.java-commons>
+    <version.java-commons>3.3.0027</version.java-commons>
     <version.queryj-sql>latest-SNAPSHOT</version.queryj-sql>
     <version.queryj>latest-SNAPSHOT</version.queryj>
     <version.queryj-templates-sql-java-spring>latest-SNAPSHOT</version.queryj-templates-sql-java-spring>
@@ -37,8 +37,8 @@
     <version.javacss>latest-SNAPSHOT</version.javacss>
     <version.k8s-nix>latest-SNAPSHOT</version.k8s-nix>
 
-    <version.mariadb-java-client>3.4.1</version.mariadb-java-client>
-    <version.spring-jdbc>6.1.14</version.spring-jdbc>
+    <version.mariadb-java-client>3.5.2</version.mariadb-java-client>
+    <version.spring-jdbc>7.0.0-M2</version.spring-jdbc>
     <version.lombok>1.16.12</version.lombok>
     <version.oracle-driver>23.5.0.24.07</version.oracle-driver>
     <version.powermock>2.0.9</version.powermock>
@@ -77,7 +77,7 @@
     <!-- third-party versions -->
 
     <version.animal-sniffer-maven-plugin>1.24</version.animal-sniffer-maven-plugin>
-    <version.antlr4>4.3</version.antlr4>
+    <version.antlr4>4.13.2</version.antlr4>
     <version.antlr4-annotations>4.3</version.antlr4-annotations>
     <version.asm>9.7</version.asm>
     <version.aspectjrt>1.9.22.1</version.aspectjrt>
@@ -85,25 +85,25 @@
 
     <version.checkthread>1.0.10-SNAPSHOT</version.checkthread>
     <version.commons-dbcp>2.12.0</version.commons-dbcp>
-    <version.commons-logging>1.3.4</version.commons-logging>
+    <version.commons-logging>1.3.5</version.commons-logging>
     <version.commons-pool>2.12.0</version.commons-pool>
-    <version.cucumber-core>7.18.1</version.cucumber-core>
+    <version.cucumber-core>7.21.1</version.cucumber-core>
     <version.cucumber-java>${version.cucumber-core}</version.cucumber-java>
     <version.cucumber-junit>${version.cucumber-core}</version.cucumber-junit>
 
-    <version.easymock>5.4.0</version.easymock>
+    <version.easymock>5.5.0</version.easymock>
     <version.ehcache>3.10.8</version.ehcache>
     
-    <version.spotbugs>4.8.6</version.spotbugs>
+    <version.spotbugs>4.9.1</version.spotbugs>
     <version.spotbugs-annotations>${version.spotbugs}</version.spotbugs-annotations>
 
     <version.httpclient>5.3.1</version.httpclient>
     <version.httpcore>4.3.2</version.httpcore>
 
     <version.jca>2.1.0</version.jca>
-    <version.jaxb>2.3.0</version.jaxb>
+    <version.jaxb>2.4.0-b180830.0359</version.jaxb>
     <version.jakarta-xml-bind-api>4.0.2</version.jakarta-xml-bind-api>
-    <version.jaxb-impl>4.0.2</version.jaxb-impl>
+    <version.jaxb-impl>4.0.5</version.jaxb-impl>
     <version.jersey>3.1.8</version.jersey>
     <version.jetty>8.1.16.v20140903</version.jetty>
     <version.jetty9>9.2.2.v20140723</version.jetty9>
@@ -112,15 +112,15 @@
     <version.jetty-jspc-maven-plugin>${version.jetty}</version.jetty-jspc-maven-plugin>
     <version.json-simple>1.1</version.json-simple>
     <version.jstl>1.2.1</version.jstl>
-    <version.junit>4.11</version.junit>
+    <version.junit>4.13.2</version.junit>
 
-    <version.lombok>1.18.2.0</version.lombok>
-    <version.lombok-maven-plugin>1.18.2.0</version.lombok-maven-plugin>
+    <version.lombok>1.18.36</version.lombok>
+    <version.lombok-maven-plugin>1.18.20.0</version.lombok-maven-plugin>
 
     <!-- See http://maven.apache.org/plugins/index.html -->
     <!-- and https://www.mojohaus.org/plugins.html -->
 
-    <version.animal-sniffer-maven-plugin>1.20</version.animal-sniffer-maven-plugin>
+    <version.animal-sniffer-maven-plugin>1.24</version.animal-sniffer-maven-plugin>
     <version.antlr-maven-plugin>2.2</version.antlr-maven-plugin>
     <version.apt-maven-plugin>1.0-alpha-5</version.apt-maven-plugin>
     <version.cbuilds-maven-plugin>1.0-beta-1</version.cbuilds-maven-plugin>
@@ -159,7 +159,7 @@
     <version.depgraph-maven-plugin>4.0.3</version.depgraph-maven-plugin>
     <version.maven-compiler-plugin>3.13.0</version.maven-compiler-plugin>
     <version.maven-compat>${version.maven-libs}</version.maven-compat>
-    <version.maven-core>${version.maven-libs}</version.maven-core>
+    <version.maven-core>4.0.0-rc-2</version.maven-core>
     <version.maven-dependency-plugin>3.8.0</version.maven-dependency-plugin>
     <version.maven-deploy-plugin>3.1.3</version.maven-deploy-plugin>
     <version.ditaot-maven-plugin>1.0</version.ditaot-maven-plugin>
@@ -200,7 +200,7 @@
     <version.js-import-maven-plugin>1.0.1</version.js-import-maven-plugin>
     <version.jslint-maven-plugin>1.0.1</version.jslint-maven-plugin>
     <version.maven-jspc-plugin>1.4.6</version.maven-jspc-plugin>
-    <version.maven-jxr-plugin>3.5.0</version.maven-jxr-plugin>
+    <version.maven-jxr-plugin>3.6.0</version.maven-jxr-plugin>
     <version.keytool-maven-plugin>1.7</version.keytool-maven-plugin>
     <version.latex>1.1</version.latex>
     <version.maven-libs>3.2.5</version.maven-libs>
@@ -210,10 +210,10 @@
     <version.ounce-maven-plugin>1.6.1</version.ounce-maven-plugin>
     <version.maven-patch-plugin>1.2</version.maven-patch-plugin>
     <version.maven-pdf-plugin>1.4</version.maven-pdf-plugin>
-    <version.maven-plugin-api>${version.maven-libs}</version.maven-plugin-api>
+    <version.maven-plugin-api>4.0.0-rc-2</version.maven-plugin-api>
     <version.maven-plugin-plugin>4.0.0-beta-1</version.maven-plugin-plugin>
-    <version.maven-plugin-testing-harness>3.3.0</version.maven-plugin-testing-harness>
-    <version.maven-plugin-annotations>3.4</version.maven-plugin-annotations>
+    <version.maven-plugin-testing-harness>4.0.0-beta-3</version.maven-plugin-testing-harness>
+    <version.maven-plugin-annotations>4.0.0-beta-1</version.maven-plugin-annotations>
     <version.maven-pmd-plugin>3.25.0</version.maven-pmd-plugin>
     <version.maven-project-info-reports-plugin>3.7.0</version.maven-project-info-reports-plugin>
     <version.maven-rar-plugin>2.4</version.maven-rar-plugin>
@@ -257,12 +257,12 @@
     <version.xml-maven-plugin>1.0.2</version.xml-maven-plugin>
     <version.mockito>1.9.5</version.mockito>
 
-    <version.netty>5.0.0.Alpha1</version.netty>
+    <version.netty>5.0.0.Alpha2</version.netty>
 
     <version.selenium>2.41.0</version.selenium>
     <version.slf4j>1.7.7</version.slf4j>
-    <version.spock>1.3-groovy-2.5</version.spock>
-    <version.springboot>2.2.0.RELEASE</version.springboot>
+    <version.spock>2.4-M5-groovy-4.0</version.spock>
+    <version.springboot>3.4.3</version.springboot>
 
     <version.versions-maven-plugin>2.17.1</version.versions-maven-plugin>
 
