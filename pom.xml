@@ -460,7 +460,7 @@
       <dependency>
         <groupId>org.apache.ant</groupId>
         <artifactId>ant</artifactId>
-        <version>1.10.9</version>
+        <version>1.10.15</version>
       </dependency>
       <dependency>
         <groupId>org.apache.maven</groupId>
@@ -536,12 +536,12 @@
       <dependency>
         <groupId>org.antlr</groupId>
         <artifactId>ST4</artifactId>
-        <version>4.0.8</version>
+        <version>4.3.4</version>
       </dependency>
       <dependency>
         <groupId>org.antlr</groupId>
         <artifactId>antlr</artifactId>
-        <version>3.5.2</version>
+        <version>3.5.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.httpcomponents.client5</groupId>
@@ -561,7 +561,7 @@
       <dependency>
         <groupId>commons-cli</groupId>
         <artifactId>commons-cli</artifactId>
-        <version>1.2</version>
+        <version>1.9.0</version>
       </dependency>
       <dependency>
         <groupId>commons-lang</groupId>
@@ -571,17 +571,17 @@
       <dependency>
         <groupId>commons-collections</groupId>
         <artifactId>commons-collections</artifactId>
-        <version>3.2.2</version>
+        <version>20040616</version>
       </dependency>
       <dependency>
         <groupId>commons-beanutils</groupId>
         <artifactId>commons-beanutils</artifactId>
-        <version>1.9.4</version>
+        <version>1.11.0</version>
       </dependency>
       <dependency>
         <groupId>org.jetbrains</groupId>
         <artifactId>annotations</artifactId>
-        <version>13.0</version>
+        <version>26.0.2</version>
       </dependency>
       <!--dependency>
           <groupId>org.springframework</groupId>
@@ -621,7 +621,7 @@
       <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>javax.servlet-api</artifactId>
-        <version>3.1.0</version>
+        <version>4.0.1</version>
       </dependency>
       <dependency>
         <groupId>junit</groupId>
@@ -641,7 +641,7 @@
       <dependency>
         <groupId>info.cukes</groupId>
         <artifactId>cucumber-jvm-deps</artifactId>
-        <version>1.0.3</version>
+        <version>1.0.5</version>
         <exclusions>
           <exclusion>
             <groupId>com.thoughtworks.xstream</groupId>
@@ -666,12 +666,12 @@
       <dependency>
         <groupId>com.rubiconproject.oss</groupId>
         <artifactId>jchronic</artifactId>
-        <version>0.2.6</version>
+        <version>0.2.8</version>
       </dependency>
       <dependency>
         <groupId>net.masterthought</groupId>
         <artifactId>cucumber-reporting</artifactId>
-        <version>0.0.23</version>
+        <version>5.8.4</version>
       </dependency>
       <dependency>
         <groupId>org.mockito</groupId>
